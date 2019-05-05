@@ -38,10 +38,26 @@ let slika = doc("slika")
 let slika1 = doc("slika1")
 let slika2 = doc("slika2")
 
-let pic = ""
+let pic = "";
+let stName = "";
+let grade = "";
+
+
+const studentsarray = ['Miloje Pantović', 'Aleksandar Petković', 'Aleksa Kolakovic', 'Petar Luketić', 'Đordje Krstić', 'Predrag Cerović', 'Milena Šutović', 'Marko Andrijević', 'Dragana Ljubojev',
+    'Ružica Đukić', 'Nataša Dokić', 'Nenad Knežević', 'Božidar Jovović', 'Katarina Macić', 'Aleksandra Fostikov', 'Jelena Čolević', 'Maja Đorđević', 'Petar Maksimović', 'Dragan Dagović', 'Ana Ćosić',
+    'Marijana Kuzmanoski', 'Danijela Vukosavljević', 'Nikola Đurić', 'Aleksandar Kukić', 'Ana Mitrović', 'Bojan Đurišić', 'Igor Ranković', 'Srđan Plavšić', 'Darko Ćosić', 'Dalibor Petrović',
+    'Ivana Marković', 'Milan Jovanović', 'Jelena Novaković', 'Marijana Babić', 'Veljko Petrović', 'Dragana Delibašić'
+]
+
+const gradeArray = [9.9, 9.9, 9.8, 9.8, 9.7, 9.7, 9.7, 9.7, 9.6, 9.6, 9.6, 9.5, 9.5, 9.4, 9.4, 9.3, 9.3, 9.3, 9.2, 9.2, 9.2, 9.1, 9.1, 9.1, 9.1, 9.0, 9.0, 9.0, 9.0, 9.0, 9.0, 8.9, 8.8, 8.8,
+    8.7, 8.6,
+
+]
+
 
 for (var index = 1; index <= 36; index++) {
-    pic += `img/students/student${index}.jpg \n`
+    pic += `img/students/student${index}.jpg \n`;
+    stName += ``
 
 }
 
@@ -74,27 +90,32 @@ function promeniSliku() {
 
 setInterval(promeniSliku, 5000);
 
-buyerArr = [];
-
-
-doc('submit').addEventListener('click', function() {
-
-
-
-    console.log(buyerArr)
-});
-
-name =doc('customer-name').value;
-email =doc('e-mail').value;
-age =doc('age').value;
 
 class Buyer {
-    constructor(name, email, age)  {
+    constructor(name, email, age) {
         this.name = name;
         this.email = email;
         this.age = age;
     }
 }
+
+
+
+buyerArr = [];
+
+
+doc('submit').addEventListener('click', function () {
+    console.log('ok')
+    const name = doc('customer-name').value;
+    const email = doc('e-mail').value;
+    const age = doc('age').value;
+    buyerArr.push(new Buyer(name, email, age))
+
+    console.log(buyerArr)
+});
+
+
+
 
 /* localStorage.setItem('name',JSON.stringify(name));
 localStorage.setItem('genre',JSON.stringify(genre));

@@ -1,0 +1,241 @@
+/************************************************************* FOOTER *************************************************************/
+
+.footer {
+    text-align: center;
+    background-color: #101d2c;
+    grid-column: full-start / full-end;
+    padding: 5rem;
+}
+
+/*************************************************************************/
+
+.popup {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 2000;
+}
+
+.popup-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #eee;
+    box-shadow: 0 2rem 4rem (black rgba(0, 0, 0, .9));
+    border-radius: 15px;
+    animation: box .5s ease-in-out;
+    animation-fill-mode: forwards;
+    backface-visibility: hidden;
+}
+
+.form-container {
+    margin-top: 7vh;
+    display: none;
+    animation: formFadeIn 1.5s ease-out;
+}
+
+.popup-close {
+    animation: formFadeIn 2.5s ease-out;
+}
+
+.popup-close:link, .popup-close:visited {
+    color: #777;
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-size: 5rem;
+    text-decoration: none;
+    display: inline-block;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    line-height: 1
+}
+
+.popup-close:hover {
+    color: #101d2c;
+}
+
+.form-style-1 {
+    margin: 10px auto;
+    max-width: 40rem;
+    padding: 1rem;
+    font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.form-style-1 li {
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+
+.form-style-1 label {
+    margin: 0 0 3px 0;
+    padding: 0px;
+    display: block;
+    font-weight: bold;
+}
+
+.form-style-1 input[type=text], .form-style-1 input[type=date], .form-style-1 input[type=datetime], .form-style-1 input[type=number], .form-style-1 input[type=search], .form-style-1 input[type=time], .form-style-1 input[type=url], .form-style-1 input[type=email], textarea, select {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #BEBEBE;
+    padding: 7px;
+    margin: 0px;
+    outline: none;
+}
+
+.form-style-1 input[type=text]:focus, .form-style-1 input[type=date]:focus, .form-style-1 input[type=datetime]:focus, .form-style-1 input[type=number]:focus, .form-style-1 input[type=search]:focus, .form-style-1 input[type=time]:focus, .form-style-1 input[type=url]:focus, .form-style-1 input[type=email]:focus, .form-style-1 textarea:focus, .form-style-1 select:focus {
+    -moz-box-shadow: 0 0 8px #88D5E9;
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+}
+
+.form-style-1 {
+    width: 100%;
+}
+
+.form-style-1 .field-long {
+    width: 100%;
+}
+
+.form-style-1 .field-select {
+    width: 100%;
+}
+
+.form-style-1 .field-textarea {
+    height: 100px;
+}
+
+.form-style-1 input[type=submit], .form-style-1 input[type=button] {
+    background: #4B99AD;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #fff;
+}
+
+.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover {
+    background: #4691A4;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+#submit {
+    display: none;
+}
+
+.form-btn {
+    background-color: rgb(30, 151, 182);
+    color: black;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    outline: none;
+}
+
+.form-btn:hover {
+    background-color: #101d2c;
+    color: white;
+}
+
+#fullName, #enter-mail {
+    color: red;
+}
+
+#name-wrong {
+    color: red;
+    display: none
+}
+
+#mail-wrong {
+    color: red;
+    display: none;
+}
+
+@keyframes formFadeIn {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes boxClose {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes box {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    100% {
+        width: 60rem;
+        height: 75vh;
+    }
+}
+
+@media only screen and (max-width: 50em) {
+    .form-style-1 {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 26.56em), screen and (max-height: 600px) {
+    @keyframes box {
+        0% {
+            width: 0px;
+            height: 0px;
+        }
+        100% {
+            width: auto;
+            height: 75%;
+        }
+    }
+    @keyframes box {
+        0% {
+            width: 0px;
+            height: 0px;
+        }
+        100% {
+            width: auto;
+            min-height: 55%;
+        }
+    }
+    .form-container {
+        margin-top: 1vh;
+    }
+    .form-style-1 .field-textarea {
+        height: 30px;
+    }
+    .form-style-1 input[type=text], .form-style-1 input[type=date], .form-style-1 input[type=datetime], .form-style-1 input[type=number], .form-style-1 input[type=search], .form-style-1 input[type=time], .form-style-1 input[type=url], .form-style-1 input[type=email], textarea, select {
+        padding: 1x;
+        font-size: 2rem;
+    }
+}

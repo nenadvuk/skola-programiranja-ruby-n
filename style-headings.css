@@ -1,0 +1,100 @@
+/******************** HEADINGS-NASLOVI **********************/
+
+.heading-1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 4.5rem;
+    line-height: 1;
+}
+
+.heading-2 {
+    font-family: 'Nunito', sans-serif;
+    color: #f9f7f6;
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+.heading-3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 1.9rem;
+}
+
+.heading-4 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: #f9f7f6;
+}
+
+.heading-4-dark {
+    color: rgb(255, 30, 0);
+}
+
+.heading-primary {
+    font-size: 4.3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    background-image: linear-gradient(to right, #c69963, rgb(82, 47, 7));
+    -webkit-background-clip: text;
+    /* Da efekat prebacimo na tekst */
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
+}
+
+.heading-primary-header {
+    color: #101d2c;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    /* anti-shaking*/
+    margin-bottom: 60px;
+}
+
+.heading-primary-main {
+    display: block;
+    /* span je inace inline element */
+    font-size: 5rem;
+    font-weight: 400;
+    overflow: hidden;
+    border-right: .15em solid rgb(255, 255, 255);
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: rgb(255, 255, 255);
+    }
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: 5px;
+    animation: fadeIn 10s ease-in;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

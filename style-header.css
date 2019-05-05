@@ -1,0 +1,465 @@
+/*************************************************************HEADER*************************************************************/
+
+.header {
+    grid-column: full-start / col-end 6;
+    /* posto ima 8 kolona, ukoliko nismo imenovali, postavljamo do 
+    koje kolone col-enda se prostire element, npr 6/8 i za najbolje studente nam ostaju 2/8 kolone*/
+    padding: 5rem;
+    padding-top: 4rem;
+    display: grid;
+    grid-template-rows: 1px min-content minmax(7rem, 40vh) minmax(7rem, min-content) min-content min-content;
+    /* grid-template-rows:min-content 1fr min-content minmax(6rem, min-content) 1fr;  */
+    grid-template-columns: minmax(min-content, max-content);
+    /* max-content; */
+    grid-row-gap: 1.5rem;
+    justify-content: center;
+}
+
+.header-logo {
+    height: 7rem;
+    justify-self: center;
+    filter: brightness(70%);
+    margin-bottom: 1rem;
+}
+
+.header-btn {
+    align-self: end;
+    justify-self: start;
+}
+
+.header-with-text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 2rem;
+    align-items: center;
+    font-size: 1.7rem;
+    color: black;
+}
+
+.header-with-text::before, .header-with-text::after {
+    content: "";
+    height: 1px;
+    display: block;
+    background-color: currentColor;
+}
+
+.header-with-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 3rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.header-with-logos img {
+    max-height: 3.5rem;
+    max-width: 100%;
+    max-width: 100%;
+    filter: brightness(50%);
+}
+
+.text-box {
+    position: absolute;
+    top: 35%;
+    /* u odnosu na parent element */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* pozicioniranje elementa po x i y osi, da bude tacno na sredini */
+    text-align: center;
+}
+
+@keyframes moveButton {
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    20% {
+        opacity: 0.6;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 2em;
+    border: 1px solid #666;
+    margin: 0.5em 0;
+}
+
+.btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 6px 16px;
+    display: inline-block;
+    border-radius: 20px;
+    transition: all .1s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+}
+
+.btn-white {
+    background-color: rgb(255, 255, 255);
+    color: #101d2c;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+/* Pseudo element ::, behind the button*/
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .2s;
+}
+
+.btn-white::after {
+    background-color: white;
+}
+
+/* kada je hover state nad dugmetom*/
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.7);
+    opacity: 0;
+}
+
+.btn-animated {
+    /* animation name, animation duration, animation timing function, animation delay */
+    animation: moveButton .5s ease-out 2.1s;
+    /* element get the style values set by the first keyframe before the animation starts */
+    animation-fill-mode: backwards;
+}
+
+/****************** VIDEO ****************/
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80vh;
+    width: auto;
+    z-index: -1;
+    opacity: .4;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+    min-width: 100%;
+}
+
+.bg-video-content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width:50em) {
+    .bg-video {
+        height: 61%;
+        object-fit: cover;
+        min-height: 60vh;
+    }
+}
+
+/************* NAVIGACIJA ****************/
+
+.navigation_checkbox {
+    display: none;
+}
+
+.navigation_button {
+    background-color: white;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+    border-radius: 50%;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.295);
+    text-align: center;
+    cursor: pointer;
+}
+
+.navigation_background {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 4.5rem;
+    right: 4.5rem;
+    background-image: radial-gradient(rgb(126, 229, 255), rgb(0, 60, 255));
+    /* radial-gradient - od sredine ka krajevima */
+    z-index: 1000;
+    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.navigation_nav {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+    opacity: 0;
+    transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* cubic-bezier-a transition efekat sa promenljivim brzinama od pocetka do kraja*/
+}
+
+.navigation_list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+}
+
+.navigation_item {
+    margin: 1rem;
+}
+
+.navigation_link:link, .navigation_link:visited {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+    background-size: 230%;
+    transition: all .3s;
+}
+
+.navigation_link:hover, .navigation_link:active {
+    background-position: 100%;
+    color: #777;
+}
+
+.navigation_checkbox:checked~.navigation_background {
+    /*~ sibling selector using general sibling */
+    transform: scale(170);
+}
+
+.navigation_checkbox:checked~.navigation_nav {
+    opacity: 1;
+    width: 100%;
+}
+
+/* burger menu*/
+
+.navigation_icon {
+    position: relative;
+    margin-top: 3.4rem;
+}
+
+.navigation_icon, .navigation_icon::before, .navigation_icon::after {
+    width: 4rem;
+    height: 2px;
+    background-color: #333;
+    display: inline-block;
+}
+
+.navigation_icon::before, .navigation_icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.navigation_icon::before {
+    top: -1.3rem;
+}
+
+.navigation_icon::after {
+    top: 1.3rem;
+}
+
+/*Animiranje linija unutar burger-menija*/
+
+.navigation_button:hover .navigation_icon::before {
+    top: -1.8rem;
+}
+
+.navigation_button:hover .navigation_icon::after {
+    top: 1.8rem;
+}
+
+/*Kreiranje ukrstenih linija (x-close)*/
+
+.navigation_checkbox:checked+.navigation_button .navigation_icon {
+    background-color: transparent;
+}
+
+.navigation_checkbox:checked+.navigation_button .navigation_icon::before {
+    top: 0;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.navigation_checkbox:checked+.navigation_button .navigation_icon::after {
+    top: 0;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+@media only screen and (max-width:75em) {
+    html {
+        font-size: 55%;
+        /*1rem = 8px*/
+    }
+}
+
+/* @media only screen and (max-width:50em) {
+    .container {
+        grid-template-rows: 52vh repeat(2, min-content) 100vh repeat(4, min-content);
+    }
+    html {
+        font-size: 45%;
+    }
+} */
+
+@media only screen and (max-width:50em), screen and (max-height: 700px) {
+    .header {
+        grid-column: 1 / -1;
+        grid-template-rows: repeat(2, min-content) minmax(2rem, min-content) 1fr;
+        /* repeat(3, min-content); */
+        grid-template-columns: min-content;
+    }
+    html {
+        font-size: 40%;
+    }
+}
+
+@media only screen and (max-width:36em) {
+    html {
+        font-size: 40%;
+    }
+}
+
+@media only screen and (max-width:26.56em) {
+    html {
+        font-size: 31%;
+    }
+}
+
+@media only screen and (max-width:26.56em), screen and (max-height: 500px) {
+    .header {
+        grid-column: 1 / -1;
+        grid-template-rows: repeat(2, min-content) minmax(2rem, min-content) 1fr;
+        /* repeat(3, min-content); */
+        grid-template-columns: min-content;
+    }
+   
+    .header-logo {
+        height: 4rem;
+        justify-self: center;
+        filter: brightness(70%);
+        margin-bottom: 1rem;
+    }
+    .btn:link, .btn:visited {
+        padding: 2px 3px;
+    }
+    .heading-primary-main {
+        font-size: 3rem;
+        font-weight: 400;
+    }
+    .heading-primary-sub {
+        font-size: 3rem;
+    }
+
+    .header {
+        padding: 3rem;
+        padding-top: 3rem;
+        grid-row-gap: 1rem;
+        justify-content: center;
+    }
+    
+    
+    .navigation_button {
+        height: 6rem;
+        width: 6rem;
+        top: 3rem;
+        right: 3rem;
+    }
+    .navigation_background {
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        top: 4rem;
+        right: 4rem;
+    }
+    .navigation_icon {
+        position: relative;
+        margin-top: 2.8rem;
+    }
+    .navigation_icon, .navigation_icon::before, .navigation_icon::after {
+        width: 3.5rem;
+        height: 2px;
+    }
+    .navigation_icon::before {
+        top: -1rem;
+    }
+    .navigation_icon::after {
+        top: 1rem;
+    }
+    .navigation_button:hover .navigation_icon::before {
+        top: -1.0rem;
+    }
+    .navigation_button:hover .navigation_icon::after {
+        top: 1.1rem;
+    }
+}
+@media only screen and (max-height:450px) {
+    .header {
+        padding: 0;
+        padding-top: 0;
+        grid-row-gap: 1rem;
+        justify-content: center;
+    }
+   
+    .header-logo {
+        height: 4rem;
+        justify-self: center;
+        filter: brightness(70%);
+        margin-bottom: 1rem;
+    }
+    .btn:link, .btn:visited {
+        padding: 2px 3px;
+    }
+    .heading-primary-main {
+        font-size: 3rem;
+        font-weight: 400;
+    }
+    .heading-primary-sub {
+        font-size: 3rem;
+    }
+
+
+}
+

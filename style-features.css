@@ -1,0 +1,39 @@
+/************************************************************* FEATURES *************************************************************/
+
+.features-heading {
+    align-items: center;
+    margin-top: 5rem;
+    grid-column: col-end 1 / center-end
+}
+
+.features {
+    grid-column: center-start / center-end;
+    margin: 15rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    /*Responzivno  uz minmax sirina ostaje izmemdju 25 rem i 1 fr*/
+    /* dobro igleda i sa minmax 30rem a da se grid-gap smanji na 3 rem*/
+    grid-gap: 3rem;
+    align-items: start;
+}
+
+.feature {
+    float: left;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+}
+
+.feature-icon {
+    /* background-color: #c69963; */
+    width: 4.5rem;
+    height: 4.5rem;
+    grid-row: 1 / span 2;
+    transform: translateY(-.3rem)
+}
+
+.feature-text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2.5rem;
+}

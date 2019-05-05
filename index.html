@@ -8,14 +8,14 @@
 
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
-    
-   <!--  <link rel="stylesheet" href="style-header.css">
+    <link rel="stylesheet" href="style-headings.css">
+    <link rel="stylesheet" href="style-header.css">
     <link rel="stylesheet" href="style-students.css">
     <link rel="stylesheet" href="style-features.css">
     <link rel="stylesheet" href="style-about.css">
     <link rel="stylesheet" href="style.programs.css">
-    <link rel="stylesheet" href="style-gallery.css"> -->
+    <link rel="stylesheet" href="style-gallery.css">
+    <link rel="stylesheet" href="style-footer-form.css">
     <link rel="stylesheet" href="lightbox.min.css">
     <title>Škola programiranja &nbsp;</title>
 </head>
@@ -32,7 +32,7 @@
             <div class="navigation_background">&nbsp;</div>
             <nav class="navigation_nav">
                 <ul class="navigation_list">
-                    <li class="navigation_item"><a href="#naslovna"  class="navigation_link">Naslovna</a></li>
+                    <li class="navigation_item"><a href="#naslovna" class="navigation_link">Naslovna</a></li>
                     <li class="navigation_item"><a href="#" class="navigation_link">O nama</a></li>
                     <li class="navigation_item"><a href="#" class="navigation_link">Kursevi</a></li>
                     <li class="navigation_item"><a href="#" class="navigation_link">Galerija</a></li>
@@ -53,7 +53,7 @@
             <span class="heading-primary-sub">RUBY-N</span>
         </h1>
 
-        <a href="#none"  id="register" class="btn btn-white btn-animated header-btn">REGISTRACIJA</a>
+        <a href="#none" id="register" class="btn btn-white btn-animated header-btn">REGISTRACIJA</a>
         <h2 class="header-with-text heading-3">U saradnji sa:</h2>
         <div class="header-with-logos">
             <img src="img/icons/facebook-logo.svg" alt="facebook-logo">
@@ -74,13 +74,13 @@
             </div>
             <img src="img/students/student2.jpg" id="slika1" alt="student 2" class="students-img">
             <div class="students-details">
-                <h4 class="heading-4">Ime i prezime</h4>
-                <p class="average-grade">9.1</p>
+                <h4 class="heading-4" id="student-name1">Ime i prezime</h4>
+                <p class="average-grade" id="avGrade1">9.1</p>
             </div>
             <img src="img/students/student3.jpg" id="slika2" alt="student 3" class="students-img">
             <div class="students-details">
-                <h4 class="heading-4">Ime i prezime</h4>
-                <p class="average-grade">8.9</p>
+                <h4 class="heading-4" id="student-name2">Ime i prezime</h4>
+                <p class="average-grade" id="avGrade2">8.9</p>
             </div>
         </div>
     </div>
@@ -187,11 +187,11 @@
                         <span class="card_heading-span card_heading-span--1">Front end</span>
                     </h4>
                     <div class="card_details">
-                        <ul> 
+                        <ul>
                             <li>JAVASCRIPT</li>
                             <li>CSS</li>
                             <li>HTML</li>
-                           
+
                         </ul>
                     </div>
                 </div>
@@ -220,7 +220,7 @@
                             <li>PHP</li>
                             <li>NODE.JS</li>
                             <li>MYSQL</li>
-                           
+
                         </ul>
                     </div>
 
@@ -250,7 +250,7 @@
                             <li>WordPress</li>
                             <li>Adobe Photoshop</li>
                             <li>Adobe Dreamweaver</li>
-                           
+
                         </ul>
                     </div>
 
@@ -281,7 +281,7 @@
                             <li>DOLOR</li>
                             <li>SIT</li>
                             <li>AMET</li>
-                           
+
                         </ul>
                     </div>
                 </div>
@@ -310,7 +310,7 @@
                             <li>SDS</li>
                             <li>LOREM</li>
                             <li>IPSUM</li>
-                          
+
                         </ul>
                     </div>
                 </div>
@@ -339,7 +339,7 @@
                             <li>perspiciatis</li>
                             <li>mollitia</li>
                             <li>vitae</li>
-                           
+
                         </ul>
                     </div>
                 </div>
@@ -431,7 +431,7 @@
     </section>
 
     <footer class="footer">
-        <h2 class="heading-2">Made by Nenad Vukašinović nenad_vuk © 2019</h2><br><br>
+        <h2 class="heading-2">Made by Nenad Vukašinović© 2019</h2><br><br>
         <a href="https://github.com/nenadvuk">
             <img src="img/icons/icons8-github.svg" class="feature-icon" alt="">
         </a>
@@ -455,12 +455,15 @@
             <div class="form-container" id="forma">
                 <form>
                     <ul class="form-style-1">
-                        <li><p> <span id="name-wrong">Ime i prezime nisu ispravni</span> <span id="mail-wrong">Neispravna e-mail adresa</span> </p></li>
-                        <li><label>Ime i prezime <span id="fullName">* Obavezno polje</span></label> 
-                                <input type="text" name="field1" class="field-long" placeholder="Ime"  id="customer-name"  />  
                         <li>
-                            <label>Email <span id='enter-mail' >* Obavezno polje</span></label>
-                            <input type="email" name="field3" class="field-long"  placeholder="e-mail" id='e-mail'/>
+                            <p> <span id="name-wrong">Ime i prezime nisu ispravni</span> <span
+                                    id="mail-wrong">Neispravna e-mail adresa</span> </p>
+                        </li>
+                        <li><label>Ime i prezime <span id="fullName">* Obavezno polje</span></label>
+                            <input type="text" name="field1" class="field-long" placeholder="Ime" id="customer-name" />
+                        <li>
+                            <label>Email <span id='enter-mail'>* Obavezno polje</span></label>
+                            <input type="email" name="field3" class="field-long" placeholder="e-mail" id='e-mail' />
                         </li>
                         <li><label>Godine</label>
                             <input type="number" min="17" max="75" id="age">
@@ -475,10 +478,10 @@
                         </li>
                         <li>
                             <label>Pitanja</label>
-                            <textarea name="field5" class="field-long field-textarea" id="t-area" ></textarea>
+                            <textarea name="field5" class="field-long field-textarea" id="t-area"></textarea>
                         </li>
                         <li>
-                            <button class="form-btn"  id='submit'>Pošalji</button>
+                            <button class="form-btn" id='submit'>Pošalji</button>
                         </li>
                     </ul>
                 </form>
@@ -491,7 +494,7 @@
         </div>
 
     </div>
-    
+
 
     <script src="main.js"></script>
     <script src="lightbox-plus-jquery.min.js"></script>

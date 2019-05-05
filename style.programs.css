@@ -1,0 +1,245 @@
+/************************************************************* PROGRAMI *************************************************************/
+
+.programs-heading {
+    align-items: center;
+    margin-top: 5rem;
+    margin-left: 6rem;
+    grid-column: col-end 2 / center-end
+}
+
+.programs {
+    grid-column: center-start / center-end;
+    margin: 8rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 6rem;
+}
+
+.card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 50rem;
+    backface-visibility: hidden;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 4.5rem;
+    line-height: 2;
+    text-transform: uppercase;
+}
+
+.card_side {
+    height: 50rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.card_side--front {
+    background-color: #fff;
+}
+
+.card_side--back {
+    transform: rotateY(180deg);
+}
+
+.card_side--back-1 {
+    background-image: linear-gradient(to right bottom, #ffdf85, #e2560a);
+}
+
+.card_side--back-2 {
+    background-image: linear-gradient(to right bottom, #a0ff90, #28b485);
+}
+
+.card_side--back-3 {
+    background-image: linear-gradient(to right bottom, #a6d0f8, #321cfd);
+}
+
+.card_side--back-4 {
+    background-image: linear-gradient(to right bottom, rgb(219, 177, 255), rgb(115, 12, 206));
+}
+
+.card_side--back-5 {
+    background-image: linear-gradient(to right bottom, rgb(230, 217, 104), rgb(255, 208, 0));
+}
+
+.card_side--back-6 {
+    background-image: linear-gradient(to right bottom, rgb(255, 167, 210), rgb(252, 39, 138));
+}
+
+.card:hover .card_side--front {
+    transform: rotateY(-180deg);
+}
+
+.card:hover .card_side--back {
+    transform: rotateY(0);
+}
+
+.card_picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.card_picture--1 {
+    background-image: linear-gradient(to right bottom, #ffdf85, #e2560a), url(../img/);
+}
+
+.card_picture--2 {
+    background-image: linear-gradient(to right bottom, #a0ff90, #28b485), url(../img/);
+}
+
+.card_picture--3 {
+    background-image: linear-gradient(to right bottom, #a6d0f8, #321cfd), url(../img/);
+}
+
+.card_picture--4 {
+    background-image: linear-gradient(to right bottom, rgb(219, 177, 255), rgb(115, 12, 206)), url(../img/);
+}
+
+.card_picture--5 {
+    background-image: linear-gradient(to right bottom, rgb(255, 244, 146), rgb(255, 208, 0)), url(../img/);
+}
+
+.card_picture--6 {
+    background-image: linear-gradient(to right bottom, rgb(255, 167, 210), rgb(252, 39, 138)), url(../img/);
+}
+
+.card_heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+}
+
+.card_heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+.card_heading-span--1 {
+    background-image: linear-gradient(to right bottom, #ffdf85, #e2560a);
+}
+
+.card_heading-span--2 {
+    background-image: linear-gradient(to right bottom, #a0ff90, #28b485);
+}
+
+.card_heading-span--3 {
+    background-image: linear-gradient(to right bottom, #a6d0f8, #321cfd);
+}
+
+.card_heading-span--4 {
+    background-image: linear-gradient(to right bottom, rgb(219, 177, 255), rgb(115, 12, 206));
+}
+
+.card_heading-span--5 {
+    background-image: linear-gradient(to right bottom, rgb(230, 217, 104), rgb(255, 208, 0));
+}
+
+.card_heading-span--6 {
+    background-image: linear-gradient(to right bottom, rgb(255, 167, 210), rgb(252, 39, 138));
+}
+
+.card_details {
+    padding: 3rem;
+}
+
+.card_details ul {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.card_details ul li {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.card_details ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.card_cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+}
+
+.card_price-box {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8rem;
+}
+
+.card_price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.card_price-value {
+    font-size: 6rem;
+    font-weight: 100;
+}
+
+/****************** mediaquerry za kartice za programe ***********************/
+
+@media only screen and (max-width: 846px), only screen and (hover: none) {
+    .card {
+        height: auto;
+        max-width: 35rem;
+        margin: auto;
+        border-radius: 3px;
+        background-color: #fff;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    }
+    .card_side {
+        height: auto;
+        position: relative;
+        box-shadow: none;
+    }
+    .card_side--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    }
+    .card:hover .card_side--front {
+        transform: rotateY(0);
+    }
+    .card_details {
+        padding: 1rem 3rem;
+    }
+    .card_cta {
+        position: relative;
+        top: 0%;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        padding: 7rem 4rem 4rem 4rem;
+    }
+    .card_price-box {
+        margin-bottom: 3rem;
+    }
+    .card_price-value {
+        font-size: 4rem;
+    }
+}
