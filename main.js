@@ -108,7 +108,7 @@ function promeniSliku() {
 
 }
 
-setInterval(promeniSliku, 5000);
+setInterval(promeniSliku, 10000);
 
 
 class Buyer {
