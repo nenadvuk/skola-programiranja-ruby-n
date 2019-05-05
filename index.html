@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    
+   <!--  <link rel="stylesheet" href="style-header.css">
+    <link rel="stylesheet" href="style-students.css">
+    <link rel="stylesheet" href="style-features.css">
+    <link rel="stylesheet" href="style-about.css">
+    <link rel="stylesheet" href="style.programs.css">
+    <link rel="stylesheet" href="style-gallery.css"> -->
+    <link rel="stylesheet" href="lightbox.min.css">
+    <title>Škola programiranja &nbsp;</title>
+</head>
+
+<body class="container">
+
+
+    <header class="header">
+        <div class="navigation">
+            <input type="checkbox" class="navigation_checkbox" id="navi_toggle">
+            <label for="navi_toggle" class="navigation_button">
+                <span class="navigation_icon">&nbsp;</span>
+            </label>
+            <div class="navigation_background">&nbsp;</div>
+            <nav class="navigation_nav">
+                <ul class="navigation_list">
+                    <li class="navigation_item"><a href="#naslovna"  class="navigation_link">Naslovna</a></li>
+                    <li class="navigation_item"><a href="#" class="navigation_link">O nama</a></li>
+                    <li class="navigation_item"><a href="#" class="navigation_link">Kursevi</a></li>
+                    <li class="navigation_item"><a href="#" class="navigation_link">Galerija</a></li>
+                    <li class="navigation_item"><a href="#" class="navigation_link">------</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bg-video">
+            <video class="bg-video-content" autoplay muted loop>
+                <source src="video/video3.mp4" type="video/mp4">
+                <source src="video/video4.webm" type="video/webm">
+                Your browser is not supported!
+            </video>
+        </div>
+        <img src="img/icons/ruby-logo-200px.svg" alt="Red ruby" class="header-logo">
+        <h1 class="heading-primary-header">
+            <span class="heading-primary-main">Škola programiranja</span>
+            <span class="heading-primary-sub">RUBY-N</span>
+        </h1>
+
+        <a href="#none"  id="register" class="btn btn-white btn-animated header-btn">REGISTRACIJA</a>
+        <h2 class="header-with-text heading-3">U saradnji sa:</h2>
+        <div class="header-with-logos">
+            <img src="img/icons/facebook-logo.svg" alt="facebook-logo">
+            <img src="img/icons/google-logo.svg" alt="google-logo">
+            <img src="img/icons/windows-logo.svg" alt="windows-logo">
+            <img src="img/icons/apple-logo.svg" alt="apple-logo">
+        </div>
+
+    </header>
+
+    <div class="students">
+        <h2 class="heading-2">Najbolji polaznici</h2>
+        <div class="students-container">
+            <img src="img/students/student1.jpg" id="slika" alt="student 1" class="students-img">
+            <div class="students-details">
+                <h4 class="heading-4" id="student-name">Ime i prezime</h4>
+                <p class="average-grade" id="avGrade">9.5</p>
+            </div>
+            <img src="img/students/student2.jpg" id="slika1" alt="student 2" class="students-img">
+            <div class="students-details">
+                <h4 class="heading-4">Ime i prezime</h4>
+                <p class="average-grade">9.1</p>
+            </div>
+            <img src="img/students/student3.jpg" id="slika2" alt="student 3" class="students-img">
+            <div class="students-details">
+                <h4 class="heading-4">Ime i prezime</h4>
+                <p class="average-grade">8.9</p>
+            </div>
+        </div>
+    </div>
+    <div class="features-heading">
+        <h1 class="heading-primary">Najpopularniji programski jezici</h1> <!-- Dodato za naslov za features -->
+    </div>
+    <section class="features">
+        <div class="feature">
+            <img class="feature-icon" src="img/icons/javascript.svg" alt="python">
+            <h4 class="heading-4 heading-4-dark">Javascript</h4>
+            <p class="feature-text"> JavaScript je programski jezik koji se koristi na web stranicama. Izvrvšavaju
+                ga
+                web čitači i bez njega se danas ne mogu zamisliti web aplikacije. Ako pratimo trend sve većeg
+                korišćenja web aplikfacija, možemo reći da je JavaScript jezik budućnolsti. U JavaScriptu nema
+                klasičnog objektno-orijentisanog programiranja, već bismo pre mogli da kažemo da je to jezik
+                zasnovan na objektima - može da koristi već gotove objekte.
+            </p>
+        </div>
+        <div class="feature">
+            <img class="feature-icon" src="img/icons/java.svg" alt="python">
+            <h4 class="heading-4 heading-4-dark">Java</h4>
+            <p class="feature-text">Java je programski jezik, koji je razvila kompanija Sun Microsystems početkom
+                devedesetih
+                godina. Mnogi koncepti Jave su bazirani na jeziku Oberon (autora Niklausa Virta, tvorca Paskala,
+                Module
+                i drugih jezika, i Hanspetera Musenbaha). Izbacili su koncept modula i uveli pakete kakve danas
+                znamo,
+                koji se oslanjaju na fajl sistem i uveli formalno koncept klasa iz objektno-orijentisane paradigme.
+            </p>
+        </div>
+        <div class="feature">
+            <img class="feature-icon" src="img/icons/python.svg" alt="python">
+            <h4 class="heading-4 heading-4-dark">Python</h4>
+            <p class="feature-text">Python je opšte namenski programski jezik koji je dobio ime po Monty Python-u.
+                On je
+                jednostavan i neverovatno čitljiv. Odličan je za početnike i sve one koji žele da uplivaju u
+                programerske vode. Postoje razne biblioteke koje su kreirane za njega a tiču se matematike, fizike,
+                analize podataka itd. Koristi se u raznim industrijama i upotrebljavaju ga kompanije kao što su
+                Google,
+                NASA, Reddit, Disney.</p>
+        </div>
+        <div class="feature">
+            <img class="feature-icon" src="img/icons/php.svg" alt="python">
+            <h4 class="heading-4 heading-4-dark">PHP</h4>
+            <p class="feature-text">PHP je skriptni jezik namenjen za izradu dinamičnog web sadržaja i izvodi se na
+                strani servera. Zbog svoje sintakse koju je nasledio od programskog jezika C i zbog svoje
+                jednostavnosti
+                stekao je veliku popularnost. Kako je vreme prolazilo jezik se proširivao i sticao mogućnost za
+                objektno
+                orijentisano programiranje. Ima mogućnost za čisto-proceduralno programiranje, ali isto tako
+                omogućava i
+                korišćenje klasa i drugih koncepata objektno orjentisanog programiranja. </p>
+        </div>
+        <div class="feature">
+            <img class="feature-icon" src="img/icons/c-sharp.svg" alt="python">
+            <h4 class="heading-4 heading-4-dark">C#</h4>
+            <p class="feature-text">C# je objektno-orijentisani programski jezik opšte namene i koristi se za razvoj
+                poslovnih aplikacija. C# je razvijen od strane Microsoft-a i predstavlja osnovni jezik .NET
+                framework-a.
+                C# se primarno koristi za izradu konzolnih aplikacija, aplikacija sa grafičkim korisničkim
+                okruženjem
+                (GUI), veb aplikacija i slično. Ove aplikacije se pokreću na personalnim računarima, Windows
+                mobilnim
+                uređajima i ugradnim sistemima.
+            </p>
+        </div>
+        <div class="feature">
+            <img class="feature-icon" src="img/icons/ruby.svg" alt="python">
+            <h4 class="heading-4 heading-4-dark">Ruby</h4>
+            <p class="feature-text">Ruby je dinamički objektno orijentisan programski jezik koji je u upotrebi od
+                sredine 1990-ih godina – duže nego Java ili PHP. Bez obzira na njegove prednosti, interesovanje za
+                njega
+                je ostalo slabo sve do razvoja Ruby on Rails programa za web pre nekoliko godina.
+                Ruby on Rails je olakšao kreiranje web aplikacija zasnovanih na bazama podataka. Pristalice sistema
+                kažu
+                da web aplikacije mogu da se programiraju do 10 puta brže nego upotrebom drugih programskih jezika.
+            </p>
+        </div>
+    </section>
+
+    <div class="about-pictures">
+        <img src="img/img1511.jpg" alt="Laptop on the desk with some code" class="about-img1">
+        <img src="img/img101.jpg" alt="Students graduated" class="about-img2">
+    </div>
+
+    <div class="about-content">
+        <h1 class="heading-primary">O nama</h1>
+        <h2 class="heading-3">O školi</h2><br>
+        <h2 class="heading-3">Način rada</h2><br>
+        <h2 class="heading-3">Koji su preduslovi za školu</h2><br>
+        <h2 class="heading-3">Nakon škole</h2>
+    </div>
+    <div class="programs-heading">
+        <h1 class="heading-primary">Kursevi u ponudi</h1>
+    </div>
+    <section class="programs">
+        <div class="program">
+            <div class="card">
+                <div class="card_side card_side--front">
+                    <div class="card_picture card_picture--1">
+                        &nbsp;
+                    </div>
+                    <h4 class="card_heading">
+                        <span class="card_heading-span card_heading-span--1">Front end</span>
+                    </h4>
+                    <div class="card_details">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card_side card_side--back card_side--back-1">
+                    <div class="card_cta">
+                        <div class="card_price-box">
+                            <p class="card_price-only">Samo</p>
+                            <p class="card_price-value">499€</p>
+                        </div>
+                        <a href="#popup" class="btn btn-white">Kupi online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="program">
+            <div class="card">
+                <div class="card_side card_side--front">
+                    <div class="card_picture card_picture--2">
+                        &nbsp;
+                    </div>
+                    <h4 class="card_heading">
+                        <span class="card_heading-span card_heading-span--2">Back end</span>
+                    </h4>
+                    <div class="card_details">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="card_side card_side--back card_side--back-2">
+                    <div class="card_cta">
+                        <div class="card_price-box">
+                            <p class="card_price-only">Samo</p>
+                            <p class="card_price-value">499€</p>
+                        </div>
+                        <a href="#popup" class="btn btn-white">Kupi online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="program">
+            <div class="card">
+                <div class="card_side card_side--front">
+                    <div class="card_picture card_picture--3">
+                        &nbsp;
+                    </div>
+                    <h4 class="card_heading">
+                        <span class="card_heading-span card_heading-span--3">Web design</span>
+                    </h4>
+                    <div class="card_details">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="card_side card_side--back card_side--back-3">
+                    <div class="card_cta">
+                        <div class="card_price-box">
+                            <p class="card_price-only">Samo</p>
+                            <p class="card_price-value">€399€</p>
+                        </div>
+                        <a href="#popup" class="btn btn-white">Kupi online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="program">
+            <div class="card">
+                <div class="card_side card_side--front">
+                    <div class="card_picture card_picture--4">
+                        &nbsp;
+                    </div>
+                    <h4 class="card_heading">
+                        <span class="card_heading-span card_heading-span--4">Android</span>
+                    </h4>
+                    <div class="card_details">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card_side card_side--back card_side--back-4">
+                    <div class="card_cta">
+                        <div class="card_price-box">
+                            <p class="card_price-only">Samo</p>
+                            <p class="card_price-value">349€</p>
+                        </div>
+                        <a href="#popup" class="btn btn-white">Kupi online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="program">
+            <div class="card">
+                <div class="card_side card_side--front">
+                    <div class="card_picture card_picture--5">
+                        &nbsp;
+                    </div>
+                    <h4 class="card_heading">
+                        <span class="card_heading-span card_heading-span--5">IOS</span>
+                    </h4>
+                    <div class="card_details">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card_side card_side--back card_side--back-5">
+                    <div class="card_cta">
+                        <div class="card_price-box">
+                            <p class="card_price-only">Samo</p>
+                            <p class="card_price-value">379€</p>
+                        </div>
+                        <a href="#popup" class="btn btn-white">Kupi online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="program">
+            <div class="card">
+                <div class="card_side card_side--front">
+                    <div class="card_picture card_picture--6">
+                        &nbsp;
+                    </div>
+                    <h4 class="card_heading">
+                        <span class="card_heading-span card_heading-span--6">MS OFFICE</span>
+                    </h4>
+                    <div class="card_details">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card_side card_side--back card_side--back-6">
+                    <div class="card_cta">
+                        <div class="card_price-box">
+                            <p class="card_price-only">Samo</p>
+                            <p class="card_price-value">129€</p>
+                        </div>
+                        <a href="#popup" class="btn btn-white">Kupi online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+
+        <!--  <img src="img/gallery-small/img1s.jpg" class="big" alt="Gallery image 1">
+        <img src="img/gallery-small/img2s.jpg" class="horizontal" alt="Gallery image 2">
+        <img src="img/gallery-small/img3s.jpg" class="" alt="Gallery image 3">
+        <img src="img/gallery-small/img4s.jpg" class="horizontal" alt="Gallery image 4">
+        <img src="img/gallery-small/img5s.jpg" class="vertical" alt="Gallery image 5">
+        <img src="img/gallery-small/img6s.jpg" class="big" alt="Gallery image 6">
+        <img src="img/gallery-small/img7s.jpg" class="" alt="Gallery image 7">
+        <img src="img/gallery-small/img8s.jpg" class="" alt="Gallery image 8">
+        <img src="img/gallery-small/img9s.jpg" class="vertical" alt="Gallery image 9">
+        <img src="img/gallery-small/img10s.jpg" class="" alt="Gallery image 10">
+        <img src="img/gallery-small/img11s.jpg" class="vertical" alt="Gallery image 11">
+        <img src="img/gallery-small/img12s.jpg" class="horizontal" alt="Gallery image 12">
+        <img src="img/gallery-small/img13s.jpg" class="vertical" alt="Gallery image 13">
+        <img src="img/gallery-small/img14s.jpg" class="" alt="Gallery image 14">
+        <img src="img/gallery-small/img15s.jpg" class="" alt="Gallery image 15">
+        <img src="img/gallery-small/img16s.jpg" class="horizontal" alt="Gallery image 16">
+        <img src="img/gallery-small/img17s.jpg" class="horizontal" alt="Gallery image 17">
+    </section> -->
+
+        <a href="img/gallery-big/img1b.jpg" class="big" alt="Gallery image 1" data-lightbox="mojagalerija"> <img
+                src="img/gallery-small/img1s.jpg">
+        </a>
+        <a href="img/gallery-big/img2b.jpg" class="horizontal" data-lightbox="mojagalerija" alt="Gallery image 2">
+            <img src="img/gallery-small/img2s.jpg">
+        </a>
+        <a href="img/gallery-big/img3b.jpg" class="" data-lightbox="mojagalerija" alt="Gallery image 3"> <img
+                src="img/gallery-small/img3s.jpg">
+        </a>
+        <a href="img/gallery-big/img4b.jpg" class="horizontal" data-lightbox="mojagalerija" alt="Gallery image 4">
+            <img src="img/gallery-small/img4s.jpg">
+        </a>
+        <a href="img/gallery-big/img5b.jpg" class="vertical" data-lightbox="mojagalerija" alt="Gallery image 5"> <img
+                src="img/gallery-small/img5s.jpg">
+        </a>
+        <a href="img/gallery-big/img6b.jpg" class="big" data-lightbox="mojagalerija" alt="Gallery image 6"> <img
+                src="img/gallery-small/img6s.jpg">
+        </a>
+        <a href="img/gallery-big/img7b.jpg" class="" data-lightbox="mojagalerija" alt="Gallery image 7"> <img
+                src="img/gallery-small/img7s.jpg">
+        </a>
+        <a href="img/gallery-big/img8b.jpg" class="" data-lightbox="mojagalerija" alt="Gallery image 8"> <img
+                src="img/gallery-small/img8s.jpg">
+        </a>
+        <a href="img/gallery-big/img9b.jpg" class="vertical" alt="Gallery image 9" data-lightbox="mojagalerija"> <img
+                src="img/gallery-small/img9s.jpg">
+        </a>
+        <a href="img/gallery-big/img10b.jpg" class="" alt="Gallery image 10" data-lightbox="mojagalerija"> <img
+                src="img/gallery-small/img10s.jpg">
+        </a>
+        <a href="img/gallery-big/img11b.jpg" class="vertical" alt="Gallery image 11" data-lightbox="mojagalerija">
+            <img src="img/gallery-small/img11s.jpg">
+        </a>
+        <a href="img/gallery-big/img12b.jpg" class="horizontal" alt="Gallery image 12" data-lightbox="mojagalerija">
+            <img src="img/gallery-small/img12s.jpg">
+        </a>
+        <a href="img/gallery-big/img13b.jpg" class="vertical" alt="Gallery image 13" data-lightbox="mojagalerija">
+            <img src="img/gallery-small/img13s.jpg">
+        </a>
+        <a href="img/gallery-big/img14b.jpg" class="" alt="Gallery image 14" data-lightbox="mojagalerija"> <img
+                src="img/gallery-small/img14s.jpg">
+        </a>
+        <a href="img/gallery-big/img15b.jpg" class="" alt="Gallery image 14" data-lightbox="mojagalerija"> <img
+                src="img/gallery-small/img15s.jpg">
+        </a>
+        <a href="img/gallery-big/img16b.jpg" class="horizontal" alt="Gallery image 14" data-lightbox="mojagalerija">
+            <img src="img/gallery-small/img16s.jpg">
+        </a>
+        <a href="img/gallery-big/img17b.jpg" class="horizontal" alt="Gallery image 14" data-lightbox="mojagalerija">
+            <img src="img/gallery-small/img17s.jpg">
+        </a>
+    </section>
+
+    <footer class="footer">
+        <h2 class="heading-2">Made by Nenad Vukašinović nenad_vuk © 2019</h2><br><br>
+        <a href="https://github.com/nenadvuk">
+            <img src="img/icons/icons8-github.svg" class="feature-icon" alt="">
+        </a>
+        <a href="mailto:nenadvukasinovic.rs@gmail.com">
+            <img src="img/icons/icons8-gmail.svg" class="feature-icon" alt="">
+        </a>
+        <a href="https://www.facebook.com/nenad.vukasinovic">
+            <img src="img/icons/icons8-facebook.svg" class="feature-icon" alt="">
+        </a>
+        <a href="https://slack.com/nenad_vuk">
+            <img src="img/icons/icons8-slack.svg" class="feature-icon" alt="">
+        </a>
+        <a href="https://twitter.com/nenad_vuk">
+            <img src="img/icons/icons8-twitter.svg" class="feature-icon" alt="">
+        </a>
+
+    </footer>
+
+    <div class="popup" id="popup-window">
+        <div class="popup-container" id="popCon">
+            <div class="form-container" id="forma">
+                <form>
+                    <ul class="form-style-1">
+                        <li><p> <span id="name-wrong">Ime i prezime nisu ispravni</span> <span id="mail-wrong">Neispravna e-mail adresa</span> </p></li>
+                        <li><label>Ime i prezime <span id="fullName">* Obavezno polje</span></label> 
+                                <input type="text" name="field1" class="field-long" placeholder="Ime"  id="customer-name"  />  
+                        <li>
+                            <label>Email <span id='enter-mail' >* Obavezno polje</span></label>
+                            <input type="email" name="field3" class="field-long" id='e-mail'/>
+                        </li>
+                        <li>
+                            <label>Nivo znanja</label>
+                            <select name="field4" class="field-select">
+                                <option value="Pocetno">Početno</option>
+                                <option value="Srednje">Srednje</option>
+                                <option value="Napredno">Napredno</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label>Pitanja</label>
+                            <textarea name="field5" class="field-long field-textarea" id="t-area" ></textarea>
+                        </li>
+                        <li>
+                            <button  id='submit'>Pošalji</button>
+                        </li>
+                    </ul>
+                </form>
+
+            </div>
+            <div class="popup-right">
+                <a href="#pop" id="close" class="popup-close">&times;</a>
+
+            </div>
+        </div>
+
+    </div>
+    
+
+    <script src="main.js"></script>
+    <script src="lightbox-plus-jquery.min.js"></script>
+
+</body>
+
+</html>
