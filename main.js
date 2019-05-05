@@ -33,7 +33,7 @@ doc('e-mail').addEventListener('blur', function () {
 });
 
 doc('submit').addEventListener('click', function () {
-
+    
 })
 
 let slika = doc("slika")
