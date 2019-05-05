@@ -74,11 +74,14 @@ function promeniSliku() {
 
 setInterval(promeniSliku, 5000);
 
+buyerArr = [];
+
+
 doc('submit').addEventListener('click', function() {
 
 
 
-    
+    console.log(buyerArr)
 });
 
 name =doc('customer-name').value;
