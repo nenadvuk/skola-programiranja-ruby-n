@@ -548,7 +548,7 @@ html {
 
 @media only screen and (max-width:26.56em), screen and (max-height: 500px) {
     .header-logo {
-        height: 6rem;
+        height: 5rem;
         justify-self: center;
         filter: brightness(70%);
         margin-bottom: 1rem;
@@ -557,11 +557,11 @@ html {
         padding: 2.5px 5px;
     }
     .heading-primary-main {
-        font-size: 4.5rem;
+        font-size: 3.5rem;
         font-weight: 400;
     }
     .heading-primary-sub {
-        font-size: 6rem;
+        font-size: 4rem;
     }
 }
 
@@ -1203,6 +1203,10 @@ html {
     -webkit-box-shadow: none;
 }
 
+#submit{
+    display: none;
+}
+
 .form-btn {
     background-color:  rgb(30, 151, 182);
     color: black;
@@ -1305,7 +1309,7 @@ html {
         margin-top: 1vh;
     }
     .form-style-1 .field-textarea {
-        height: 70px;
+        height: 30px;
     }
     .form-style-1 input[type=text], .form-style-1 input[type=date], .form-style-1 input[type=datetime], .form-style-1 input[type=number], .form-style-1 input[type=search], .form-style-1 input[type=time], .form-style-1 input[type=url], .form-style-1 input[type=email], textarea, select {
         padding: 1x;

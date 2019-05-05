@@ -17,10 +17,7 @@ doc('customer-name').addEventListener('blur', function () {
     if (/^[A-Z ][A-z ]{1,20}$/.test(ime) == false) {
         doc('name-wrong').style.display = 'block'
     } else doc('name-wrong').style.display = 'none';
-    doc("fullName").style.color = "green";
-
-
-
+    //doc("fullName").style.color = "green";
 });
 
 doc('e-mail').addEventListener('blur', function () {
@@ -29,11 +26,12 @@ doc('e-mail').addEventListener('blur', function () {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail) == false) {
         doc('mail-wrong').style.display = 'block'
     } else doc('mail-wrong').style.display = 'none';
-    doc("enter-mail").style.color = "green"
+    //doc("enter-mail").style.color = "green";
+    doc('submit').style.display = 'block';
 });
 
 doc('submit').addEventListener('click', function () {
-    
+
 })
 
 let slika = doc("slika")
@@ -74,4 +72,29 @@ function promeniSliku() {
 
 }
 
-setInterval(promeniSliku, 2000)
+setInterval(promeniSliku, 2000);
+
+doc('submit').addEventListener('click', function() {
+
+
+
+    
+});
+
+name =doc('customer-name').value;
+email =doc('e-mail').value;
+age =doc('age').value;
+
+class Buyer {
+    constructor(name, email, age)  {
+        this.name = name;
+        this.email = email;
+        this.age = age;
+    }
+}
+
+/* localStorage.setItem('name',JSON.stringify(name));
+localStorage.setItem('genre',JSON.stringify(genre));
+localStorage.setItem('author',JSON.stringify(author));
+
+buyerArr = [] */
