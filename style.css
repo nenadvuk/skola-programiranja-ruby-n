@@ -863,6 +863,10 @@ html {
     position: relative;
     height: 50rem;
     backface-visibility: hidden;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 4.5rem;
+    line-height: 2;
+    text-transform: uppercase;
 }
 
 .card_side {

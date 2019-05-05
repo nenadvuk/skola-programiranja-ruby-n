@@ -72,7 +72,7 @@ function promeniSliku() {
 
 }
 
-setInterval(promeniSliku, 2000);
+setInterval(promeniSliku, 5000);
 
 doc('submit').addEventListener('click', function() {
 
