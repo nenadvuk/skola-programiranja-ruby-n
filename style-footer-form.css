@@ -195,13 +195,26 @@
     }
     100% {
         width: 60rem;
-        height: 75vh;
+        max-height: 72vh;
     }
 }
 
 @media only screen and (max-width: 50em) {
     .form-style-1 {
         width: 100%;
+    }
+}
+@media only screen and (max-height: 700px) {
+    @keyframes box {
+        0% {
+            width: 0px;
+            height: 0px;
+        }
+        100% {
+            width: 20%;
+            min-height: 65%;
+
+        }
     }
 }
 

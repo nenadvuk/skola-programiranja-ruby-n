@@ -69,7 +69,7 @@ html {
 
 @media only screen and (max-height: 700px) {
     .container {
-        grid-template-rows: 62vh min-content min-content min-content 40vw repeat(3, min-content);
+        grid-template-rows: 60vh min-content min-content min-content 40vw repeat(3, min-content);
     }
 }
 

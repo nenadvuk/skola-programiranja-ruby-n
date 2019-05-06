@@ -96,9 +96,9 @@
 .btn:link, .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 6px 16px;
+    padding: 1.3rem 1.7rem;
     display: inline-block;
-    border-radius: 20px;
+    border-radius: 25px;
     transition: all .1s;
     position: relative;
 }
@@ -384,7 +384,7 @@
         margin-bottom: 1rem;
     }
     .btn:link, .btn:visited {
-        padding: 2px 3px;
+        padding: 5px 10px;
     }
     .heading-primary-main {
         font-size: 3rem;
@@ -451,7 +451,7 @@
         margin-bottom: 1rem;
     }
     .btn:link, .btn:visited {
-        padding: 2px 3px;
+        padding: 4px 6px;
     }
     .heading-primary-main {
         font-size: 3rem;

@@ -132,3 +132,14 @@ function promeniSliku() {
 
 setInterval(promeniSliku, 5000);
 
+
+/* doc('test2').addEventListener('click', function() {
+    doc('test').style.transform= 'scale(170)';
+    console.log('ooook')
+})
+document.querySelector('.test1').addEventListener('click', function() {
+    doc('test').style.transform= 'scale(0)';
+    console.log('ok')
+}); */
+
+
