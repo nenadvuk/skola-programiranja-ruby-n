@@ -21,7 +21,7 @@ doc('customer-name').addEventListener('blur', function () {
         doc('name-wrong').style.display = 'none';
 
     } else doc('name-wrong').style.display = 'block';
-
+    
 });
 
 doc('e-mail').addEventListener('blur', function () {
@@ -29,10 +29,9 @@ doc('e-mail').addEventListener('blur', function () {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
         doc('mail-wrong').style.display = 'none';
         doc("enter-mail").style.color = "green";
-
+        
     } else doc('mail-wrong').style.display = 'block';
 });
-
 
 class Buyer {
     constructor(name, email, age) {
@@ -54,7 +53,6 @@ doc('submit').addEventListener('click', function () {
     localStorage.setItem('age', JSON.stringify(age));
 });
 
-console.log(buyerArr)
 
 
 let slika = doc("slika")
@@ -132,5 +130,5 @@ function promeniSliku() {
 
 }
 
-setInterval(promeniSliku, 2000);
+setInterval(promeniSliku, 5000);
 

@@ -10,6 +10,7 @@
     justify-content: center;
     grid-row-gap: 2rem;
     justify-items: center;
+
 }
 
 .students-container {
@@ -18,12 +19,14 @@
     grid-column-gap: 3rem;
     grid-row-gap: 5vh;
     align-items: center;
+    
 }
 
 .students-img {
     width: 10rem;
     border-radius: 20%;
     display: block;
+    
 }
 
 .students-details {

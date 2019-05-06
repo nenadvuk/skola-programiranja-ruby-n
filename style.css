@@ -73,5 +73,15 @@ html {
     }
 }
 
-
-
+.welcome-box {
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 54;
+    z-index: 5000;
+    font-family: 'Josefin Sans';
+    padding: 3rem;
+    font-size: 2rem;
+    transition: all .5s;
+}
