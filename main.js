@@ -16,7 +16,7 @@ doc('close').addEventListener('click', function () {
 
 doc('customer-name').addEventListener('blur', function () {
     ime = doc("customer-name").value;
-    if (/^[A-ZŠĐČĆŽ][A-zžćšđč]{1,20}$/.test(ime)) {
+    if (/^[A-Za-z]{1,11}\s[A-Za-z]{1,11}$/.test(ime)) {
         doc("fullName").style.color = "green";
         doc('name-wrong').style.display = 'none';
 
@@ -47,6 +47,8 @@ doc('submit').addEventListener('click', function () {
     const name = doc('customer-name').value;
     const email = doc('e-mail').value;
     const age = doc('age').value;
+    document.querySelector('.welcome-box').style.display = 'block';
+    doc('greeting').innerHTML = name;
     buyerArr.push(new Buyer(name, email, age))
     localStorage.setItem('name', JSON.stringify(name));
     localStorage.setItem('email', JSON.stringify(email));
