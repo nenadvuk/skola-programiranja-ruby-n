@@ -8,10 +8,10 @@ doc('register').addEventListener('click', function () {
 
 doc('close').addEventListener('click', function () {
     doc('popup-window').style.display = 'none';
-
-
+    doc('myForm').reset();
+    doc('name-wrong').style.display = 'none';
+    doc('mail-wrong').style.display = 'none'
 });
-
 
 
 doc('customer-name').addEventListener('blur', function () {
@@ -33,10 +33,6 @@ doc('e-mail').addEventListener('blur', function () {
     } else doc('mail-wrong').style.display = 'block';
 });
 
-/* if(ime === '' && mail === '') {
-    doc('submit').style.display = 'none'
-}  else  doc('submit').style.display = 'block' */
-
 
 class Buyer {
     constructor(name, email, age) {
@@ -46,21 +42,19 @@ class Buyer {
     }
 }
 
-
-
 const buyerArr = [];
-
 
 doc('submit').addEventListener('click', function () {
     const name = doc('customer-name').value;
     const email = doc('e-mail').value;
     const age = doc('age').value;
     buyerArr.push(new Buyer(name, email, age))
-    console.log('ok')
+    localStorage.setItem('name', JSON.stringify(name));
+    localStorage.setItem('email', JSON.stringify(email));
+    localStorage.setItem('age', JSON.stringify(age));
 });
 
 console.log(buyerArr)
-
 
 
 let slika = doc("slika")
@@ -82,9 +76,10 @@ let newGrade1 = '';
 let newGrade2 = '';
 
 const studentsarray = ['Miloje Panić', 'Ivan Perić', 'Aleksa Jokić', 'Petar Lukić', 'Đordje Krstić', 'Peđa Cerović', 'Milena Šutović', 'Marko Andrić', 'Dragana Lukić',
-    'Ružica Đukić', 'Nataša Dokić', 'Nenad Knežević', 'Boris Jovović', 'Jelena Macić', 'Ana Ćolić', 'Jelena Čolević', 'Maja Đorđević', 'Petar Maksić', 'Dragan Dabić', 'Ana Ćosić',
-    'Maja Kuzmić', 'Danijela Vlajić', 'Nikola Đurić', 'Saša Kukić', 'Ana Mitrović', 'Bojan Đurišić', 'Igor Ranković', 'Srđan Plavšić', 'Darko Ćosić', 'Marko Popović',
+    'Ružica Đukić', 'Nataša Dokić', 'Nenad Knežević', 'Boris Jovović', 'Jelena Macić', 'Ana Ćolić', 'Jelena Čolević', 'Maja Đorđević', 'Petar Maksić', 'Dragan Dabić',
+    'Ana Ćosić', 'Maja Kuzmić', 'Danijela Vlajić', 'Nikola Đurić', 'Saša Kukić', 'Ana Mitrović', 'Bojan Đurišić', 'Igor Ranković', 'Srđan Plavšić', 'Darko Ćosić', 'Marko Popović',
     'Ivana Marić', 'Milan Jović', 'Jelena Ivić', 'Marija Babić', 'Veljko Petrić', 'Maja Veličić'
+
 ]
 
 const gradeArray = [9.9, 9.9, 9.8, 9.8, 9.7, 9.7, 9.7, 9.7, 9.6, 9.6, 9.6, 9.5, 9.5, 9.4, 9.4, 9.3, 9.3, 9.3, 9.2, 9.2, 9.2, 9.1, 9.1, 9.1, 9.1, 9.0, 9.0, 9.0, 9.0, 9.0, 9.0, 8.9, 8.8, 8.8,
@@ -139,9 +134,3 @@ function promeniSliku() {
 
 setInterval(promeniSliku, 2000);
 
-
-/* localStorage.setItem('name',JSON.stringify(name));
-localStorage.setItem('genre',JSON.stringify(genre));
-localStorage.setItem('author',JSON.stringify(author));
-
-buyerArr = [] */
