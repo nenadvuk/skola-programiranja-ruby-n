@@ -13,12 +13,10 @@ doc('close').addEventListener('click', function () {
 
 
 doc('customer-name').addEventListener('blur', function() {
-    neka = false
     ime = doc("customer-name").value;
     if (/^[A-Z ][A-z ]{1,20}$/.test(ime)) {
         doc("fullName").style.color = "green";
         doc('name-wrong').style.display = 'none'; 
-        neka = true
 } else doc('name-wrong').style.display = 'block';
 
 
