@@ -1,40 +1,46 @@
 const doc = id => document.getElementById(id);
 
-doc('register').addEventListener('click', function () {
-    doc('popup-window').style.display = 'block';
-    doc('forma').style.display = 'block';
+/* loginA = false;
+loginB = false; */
+
+
+doc("register").addEventListener("click", function () {
+    doc("popup-window").style.display = "block";
+    doc("forma").style.display = "block";
 
 });
 
-doc('close').addEventListener('click', function () {
-    doc('popup-window').style.display = 'none';
-    doc('myForm').reset();
-    doc('name-wrong').style.display = 'none';
-    doc('mail-wrong').style.display = 'none'
+doc("close").addEventListener("click", function () {
+    doc("popup-window").style.display = "none";
+    doc("myForm").reset();
+    doc("name-wrong").style.display = "none";
+    doc("mail-wrong").style.display = "none"
     doc("fullName").style.color = "red";
     doc("enter-mail").style.color = "red";
 });
 
-
-doc('customer-name').addEventListener('blur', function () {
+doc("customer-name").addEventListener("blur", function () {
     ime = doc("customer-name").value;
     if (/^[A-ZŠĐČŽŽa-zšđčćž]{1,11}\s[A-ŠĐČŽŽZa-zšđčćž]{1,15}$/.test(ime)) {
         doc("fullName").style.color = "green";
-        doc('name-wrong').style.display = 'none';
+        doc("name-wrong").style.display = "none";
 
-    } else doc('name-wrong').style.display = 'block';
-
+    } else doc("name-wrong").style.display = "block";
+   /*  let loginA = true;
+    console.log(loginA) */
 });
 
-doc('e-mail').addEventListener('blur', function () {
+doc("e-mail").addEventListener("blur", function () {
     mail = doc("e-mail").value;
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
-        doc('mail-wrong').style.display = 'none';
+        doc("mail-wrong").style.display = "none";
         doc("enter-mail").style.color = "green";
 
-    } else doc('mail-wrong').style.display = 'block';
+    } else doc("mail-wrong").style.display = "block";
+    /* let loginB = true;
+    console.log(loginB) */
 });
-
+//console.log(loginB)
 class Buyer {
     constructor(name, email, age) {
         this.name = name;
@@ -42,21 +48,21 @@ class Buyer {
         this.age = age;
     }
 }
-
+ 
 const buyerArr = [];
 
-doc('submit').addEventListener('click', function () {
-    const name = doc('customer-name').value;
-    const email = doc('e-mail').value;
-    const age = doc('age').value;
-    if (name === '' || email === '') {
-        document.querySelector('.welcome-box').style.display = 'none';
-    } else document.querySelector('.welcome-box').style.display = 'block';
-    doc('greeting').innerHTML = name;
+doc("submit").addEventListener("click", function () {
+    const name = doc("customer-name").value;
+    const email = doc("e-mail").value;
+    const age = doc("age").value;
+    if (name === "" || email === "") {
+        document.querySelector(".welcome-box").style.display = "none";
+    } else document.querySelector(".welcome-box").style.display = "block";
+    doc("greeting").innerHTML = name;
     buyerArr.push(new Buyer(name, email, age))
-    localStorage.setItem('name', JSON.stringify(name));
-    localStorage.setItem('email', JSON.stringify(email));
-    localStorage.setItem('age', JSON.stringify(age));
+    localStorage.setItem("name", JSON.stringify(name));
+    localStorage.setItem("email", JSON.stringify(email));
+    localStorage.setItem("age", JSON.stringify(age));
 });
 
 let slika = doc("slika")
@@ -64,28 +70,36 @@ let slika1 = doc("slika1")
 let slika2 = doc("slika2")
 
 let pic = "";
-let stName = doc('student-name');
-let grade = doc('avGrade');
-let stName1 = doc('student-name1');
-let grade1 = doc('avGrade1');
-let stName2 = doc('student-name2');
-let grade2 = doc('avGrade2');
-let newStName = '';
-let newStName1 = '';
-let newStName2 = '';
-let newGrade = '';
-let newGrade1 = '';
-let newGrade2 = '';
+let stName = doc("student-name");
+let grade = doc("avGrade");
+let stName1 = doc("student-name1");
+let grade1 = doc("avGrade1");
+let stName2 = doc("student-name2");
+let grade2 = doc("avGrade2");
+let newStName = "";
+let newStName1 = "";
+let newStName2 = "";
+let newGrade = "";
+let newGrade1 = "";
+let newGrade2 = "";
 
-const studentsarray = ['Miloje Panić', 'Ivan Perić', 'Aleksa Jokić', 'Petar Lukić', 'Đordje Krstić', 'Peđa Cerović', 'Milena Šutović', 'Marko Andrić', 'Dragana Lukić',
-    'Ružica Đukić', 'Nataša Dokić', 'Nenad Knežević', 'Boris Jovović', 'Jelena Macić', 'Ana Ćolić', 'Jelena Čolević', 'Maja Đorđević', 'Petar Maksić', 'Dragan Dabić',
-    'Ana Ćosić', 'Maja Kuzmić', 'Danijela Vlajić', 'Nikola Đurić', 'Saša Kukić', 'Ana Mitrović', 'Bojan Đurišić', 'Igor Ranković', 'Srđan Plavšić', 'Darko Ćosić', 'Marko Popović',
-    'Ivana Marić', 'Milan Jović', 'Jelena Ivić', 'Marija Babić', 'Veljko Petrić', 'Maja Veličić'
+const studentsarray = ["Miloje Panić", "Ivan Perić", "Aleksa Jokić",
+    "Petar Lukić", "Đordje Krstić", "Peđa Cerović", "Milena Šutović",
+    "Marko Andrić", "Dragana Lukić", "Ružica Đukić", "Nataša Dokić",
+    "Nenad Knežević", "Boris Jovović", "Jelena Macić", "Ana Ćolić",
+    "Jelena Čolević", "Maja Đorđević", "Petar Maksić", "Dragan Dabić",
+    "Ana Ćosić", "Maja Kuzmić", "Danijela Vlajić", "Nikola Đurić",
+    "Saša Kukić", "Ana Mitrović", "Bojan Đurišić", "Igor Ranković",
+    "Srđan Plavšić", "Darko Ćosić", "Marko Popović", "Ivana Marić",
+    "Milan Jović", "Jelena Ivić", "Marija Babić", "Veljko Petrić",
+    "Maja Veličić"
 
 ]
 
-const gradeArray = [9.9, 9.9, 9.8, 9.8, 9.7, 9.7, 9.7, 9.7, 9.6, 9.6, 9.6, 9.5, 9.5, 9.4, 9.4, 9.3, 9.3, 9.3, 9.2, 9.2, 9.2, 9.1, 9.1, 9.1, 9.1, 9.0, 9.0, 9.0, 9.0, 9.0, 9.0, 8.9, 8.8, 8.8,
-    8.7, 8.6,
+const gradeArray = [9.9, 9.9, 9.8, 9.8, 9.7, 9.7, 9.7, 9.7,
+    9.6, 9.6, 9.6, 9.5, 9.5, 9.4, 9.4, 9.3, 9.3, 9.3, 9.2,
+    9.2, 9.2, 9.1, 9.1, 9.1, 9.1, 9.0, 9.0, 9.0, 9.0, 9.0,
+    9.0, 8.9, 8.8, 8.8, 8.7, 8.6,
 
 ]
 
@@ -94,7 +108,7 @@ for (var index = 1; index <= 36; index++) {
 
 }
 
-ar = pic.split(' ')
+ar = pic.split(" ")
 ar.pop()
 
 let i = 0
@@ -136,13 +150,13 @@ function promeniSliku() {
 setInterval(promeniSliku, 5000);
 
 
-/* doc('test2').addEventListener('click', function() {
-    doc('test').style.transform= 'scale(170)';
-    console.log('ooook')
+/* doc("test2").addEventListener("click", function() {
+    doc("test").style.transform= "scale(170)";
+    console.log("ooook")
 })
-document.querySelector('.test1').addEventListener('click', function() {
-    doc('test').style.transform= 'scale(0)';
-    console.log('ok')
+document.querySelector(".test1").addEventListener("click", function() {
+    doc("test").style.transform= "scale(0)";
+    console.log("ok")
 }); */
 
 
