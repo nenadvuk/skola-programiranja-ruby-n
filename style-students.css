@@ -20,7 +20,6 @@
     align-items: center;
 }
 
-
 .students-img {
     width: 10rem;
     border-radius: 20%;
@@ -36,14 +35,7 @@
     font-size: 3rem;
 }
 
-
 @media only screen and (max-width:50em) {
-    .students {
-        grid-column: 1/-1;
-    }
-}
-
-@media only screen and (max-width:36em), screen and (max-height: 700px) {
     .students {
         grid-column: 1/-1;
     }
@@ -64,11 +56,16 @@
         height: 8rem;
         width: auto;
         border-radius: 20%;
-        
     }
 }
 
-@media only screen and (max-width:26.56em) {
+@media only screen and (max-width:36em), screen and (max-height: 700px) {
+    .students {
+        grid-column: 1/-1;
+    }
+} 
+
+@media only screen and (max-width:31.25em) {
     .students-container {
         grid-template-columns: min-content max-content
     }

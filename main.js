@@ -52,9 +52,9 @@ let newGrade = '';
 let newGrade1 = '';
 let newGrade2 = '';
 
-const studentsarray = ['Miloje Pantović', 'Aleksandar Petković', 'Aleksa Kolakovic', 'Petar Luketić', 'Đordje Krstić', 'Predrag Cerović', 'Milena Šutović', 'Marko Andrijević', 'Dragana Ljubojev',
-    'Ružica Đukić', 'Nataša Dokić', 'Nenad Knežević', 'Božidar Jovović', 'Katarina Macić', 'Aleksandra Fostikov', 'Jelena Čolević', 'Maja Đorđević', 'Petar Maksimović', 'Dragan Dagović', 'Ana Ćosić',
-    'Marijana Kuzmanoski', 'Danijela Vukosavljević', 'Nikola Đurić', 'Aleksandar Kukić', 'Ana Mitrović', 'Bojan Đurišić', 'Igor Ranković', 'Srđan Plavšić', 'Darko Ćosić', 'Dalibor Petrović',
+const studentsarray = ['Miloje Pantović', 'ivan Petković', 'Aleksa Jokić', 'Petar Luketić', 'Đordje Krstić', 'Predrag Cerović', 'Milena Šutović', 'Marko Andrić', 'Dragana Ljubojev',
+    'Ružica Đukić', 'Nataša Dokić', 'Nenad Knežević', 'Božidar Jovović', 'Katarina Macić', 'Aleksandra Ćolić', 'Jelena Čolević', 'Maja Đorđević', 'Petar Maksimović', 'Dragan Dagović', 'Ana Ćosić',
+    'Marijana Kuzmić', 'Danijela Vlajić', 'Nikola Đurić', 'Aleksandar Kukić', 'Ana Mitrović', 'Bojan Đurišić', 'Igor Ranković', 'Srđan Plavšić', 'Darko Ćosić', 'Dalibor Petrović',
     'Ivana Marković', 'Milan Jovanović', 'Jelena Novaković', 'Marijana Babić', 'Veljko Petrović', 'Dragana Delibašić'
 ]
 
@@ -108,7 +108,7 @@ function promeniSliku() {
 
 }
 
-setInterval(promeniSliku, 10000);
+setInterval(promeniSliku, 2000);
 
 
 class Buyer {
