@@ -126,10 +126,7 @@
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
-}
 
-#submit {
-    display: none;
 }
 
 .form-btn {
@@ -148,6 +145,7 @@
     cursor: pointer;
     outline: none;
 }
+
 
 .form-btn:hover {
     background-color: #101d2c;
@@ -234,7 +232,7 @@
     .form-style-1 .field-textarea {
         height: 30px;
     }
-    .form-style-1 input[type=text], .form-style-1 input[type=date], .form-style-1 input[type=datetime], .form-style-1 input[type=number], .form-style-1 input[type=search], .form-style-1 input[type=time], .form-style-1 input[type=url], .form-style-1 input[type=email], textarea, select {
+    .form-style-1 input[type=text] {
         padding: 1x;
         font-size: 2rem;
     }

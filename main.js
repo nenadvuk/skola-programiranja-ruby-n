@@ -7,37 +7,61 @@ doc('register').addEventListener('click', function () {
 });
 
 doc('close').addEventListener('click', function () {
-    doc('popup-window').style.display = 'none'
+    doc('popup-window').style.display = 'none';
+
 
 });
 
 
-doc('customer-name').addEventListener('blur', function() {
-    ime = doc("customer-name").value;
-    if (/^[A-Z ][A-z ]{1,20}$/.test(ime)) {
-        doc("fullName").style.color = "green";
-        doc('name-wrong').style.display = 'none'; 
-} else doc('name-wrong').style.display = 'block';
 
+doc('customer-name').addEventListener('blur', function () {
+    ime = doc("customer-name").value;
+    if (/^[A-ZŠĐČĆŽ][A-zžćšđč]{1,20}$/.test(ime)) {
+        doc("fullName").style.color = "green";
+        doc('name-wrong').style.display = 'none';
+
+    } else doc('name-wrong').style.display = 'block';
 
 });
 
 doc('e-mail').addEventListener('blur', function () {
-   
     mail = doc("e-mail").value;
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
         doc('mail-wrong').style.display = 'none';
         doc("enter-mail").style.color = "green";
-        
-}else doc('mail-wrong').style.display = 'block';
+
+    } else doc('mail-wrong').style.display = 'block';
 });
 
+/* if(ime === '' && mail === '') {
+    doc('submit').style.display = 'none'
+}  else  doc('submit').style.display = 'block' */
+
+
+class Buyer {
+    constructor(name, email, age) {
+        this.name = name;
+        this.email = email;
+        this.age = age;
+    }
+}
 
 
 
-/* doc('submit').addEventListener('click', function () {
+const buyerArr = [];
 
-}) */
+
+doc('submit').addEventListener('click', function () {
+    const name = doc('customer-name').value;
+    const email = doc('e-mail').value;
+    const age = doc('age').value;
+    buyerArr.push(new Buyer(name, email, age))
+    console.log('ok')
+});
+
+console.log(buyerArr)
+
+
 
 let slika = doc("slika")
 let slika1 = doc("slika1")
@@ -57,10 +81,10 @@ let newGrade = '';
 let newGrade1 = '';
 let newGrade2 = '';
 
-const studentsarray = ['Miloje Pantović', 'Ivan Petković', 'Aleksa Jokić', 'Petar Luketić', 'Đordje Krstić', 'Predrag Cerović', 'Milena Šutović', 'Marko Andrić', 'Dragana Ljubojev',
-    'Ružica Đukić', 'Nataša Dokić', 'Nenad Knežević', 'Božidar Jovović', 'Katarina Macić', 'Aleksandra Ćolić', 'Jelena Čolević', 'Maja Đorđević', 'Petar Maksimović', 'Dragan Dagović', 'Ana Ćosić',
-    'Marijana Kuzmić', 'Danijela Vlajić', 'Nikola Đurić', 'Aleksandar Kukić', 'Ana Mitrović', 'Bojan Đurišić', 'Igor Ranković', 'Srđan Plavšić', 'Darko Ćosić', 'Dalibor Petrović',
-    'Ivana Marković', 'Milan Jovanović', 'Jelena Novaković', 'Marijana Babić', 'Veljko Petrović', 'Dragana Delibašić'
+const studentsarray = ['Miloje Panić', 'Ivan Perić', 'Aleksa Jokić', 'Petar Lukić', 'Đordje Krstić', 'Peđa Cerović', 'Milena Šutović', 'Marko Andrić', 'Dragana Lukić',
+    'Ružica Đukić', 'Nataša Dokić', 'Nenad Knežević', 'Boris Jovović', 'Jelena Macić', 'Ana Ćolić', 'Jelena Čolević', 'Maja Đorđević', 'Petar Maksić', 'Dragan Dabić', 'Ana Ćosić',
+    'Maja Kuzmić', 'Danijela Vlajić', 'Nikola Đurić', 'Saša Kukić', 'Ana Mitrović', 'Bojan Đurišić', 'Igor Ranković', 'Srđan Plavšić', 'Darko Ćosić', 'Marko Popović',
+    'Ivana Marić', 'Milan Jović', 'Jelena Ivić', 'Marija Babić', 'Veljko Petrić', 'Maja Veličić'
 ]
 
 const gradeArray = [9.9, 9.9, 9.8, 9.8, 9.7, 9.7, 9.7, 9.7, 9.6, 9.6, 9.6, 9.5, 9.5, 9.4, 9.4, 9.3, 9.3, 9.3, 9.2, 9.2, 9.2, 9.1, 9.1, 9.1, 9.1, 9.0, 9.0, 9.0, 9.0, 9.0, 9.0, 8.9, 8.8, 8.8,
@@ -114,32 +138,6 @@ function promeniSliku() {
 }
 
 setInterval(promeniSliku, 2000);
-
-
-class Buyer {
-    constructor(name, email, age) {
-        this.name = name;
-        this.email = email;
-        this.age = age;
-    }
-}
-
-
-
-buyerArr = [];
-
-
-doc('submit').addEventListener('click', function () {
-    console.log('ok')
-    const name = doc('customer-name').value;
-    const email = doc('e-mail').value;
-    const age = doc('age').value;
-    buyerArr.push(new Buyer(name, email, age))
-
-    console.log(buyerArr)
-});
-
-
 
 
 /* localStorage.setItem('name',JSON.stringify(name));
