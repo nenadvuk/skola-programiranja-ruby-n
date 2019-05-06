@@ -11,17 +11,19 @@ doc('close').addEventListener('click', function () {
     doc('myForm').reset();
     doc('name-wrong').style.display = 'none';
     doc('mail-wrong').style.display = 'none'
+    doc("fullName").style.color = "red";
+    doc("enter-mail").style.color = "red";
 });
 
 
 doc('customer-name').addEventListener('blur', function () {
     ime = doc("customer-name").value;
-    if (/^[A-Za-z]{1,11}\s[A-Za-z]{1,11}$/.test(ime)) {
+    if (/^[A-ZŠĐČŽŽa-zšđčćž]{1,11}\s[A-ŠĐČŽŽZa-zšđčćž]{1,15}$/.test(ime)) {
         doc("fullName").style.color = "green";
         doc('name-wrong').style.display = 'none';
 
     } else doc('name-wrong').style.display = 'block';
-    
+
 });
 
 doc('e-mail').addEventListener('blur', function () {
@@ -29,7 +31,7 @@ doc('e-mail').addEventListener('blur', function () {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
         doc('mail-wrong').style.display = 'none';
         doc("enter-mail").style.color = "green";
-        
+
     } else doc('mail-wrong').style.display = 'block';
 });
 
@@ -47,15 +49,15 @@ doc('submit').addEventListener('click', function () {
     const name = doc('customer-name').value;
     const email = doc('e-mail').value;
     const age = doc('age').value;
-    document.querySelector('.welcome-box').style.display = 'block';
+    if (name === '' || email === '') {
+        document.querySelector('.welcome-box').style.display = 'none';
+    } else document.querySelector('.welcome-box').style.display = 'block';
     doc('greeting').innerHTML = name;
     buyerArr.push(new Buyer(name, email, age))
     localStorage.setItem('name', JSON.stringify(name));
     localStorage.setItem('email', JSON.stringify(email));
     localStorage.setItem('age', JSON.stringify(age));
 });
-
-
 
 let slika = doc("slika")
 let slika1 = doc("slika1")
@@ -86,7 +88,6 @@ const gradeArray = [9.9, 9.9, 9.8, 9.8, 9.7, 9.7, 9.7, 9.7, 9.6, 9.6, 9.6, 9.5, 
     8.7, 8.6,
 
 ]
-
 
 for (var index = 1; index <= 36; index++) {
     pic += `img/students/student${index}.jpg \n`;
