@@ -1,11 +1,10 @@
 
--NAZIV PROJEKTA:
-
-skola-programiranja-ruby-n
+#NAZIV PROJEKTA:
+##skola-programiranja-ruby-n
 30.Slobodna tema*(web sajt, responsive dizajn)
 
 
--OPIS:
+#OPIS:
 
 -Responsive web stranica fiktivne škole za  obuku iy oblasti IT tehnologija
 -Pri učitavanju stranice korisnik dobija moućnost registracije
@@ -43,7 +42,7 @@ Sadrži sledeće elemente:
 
 
 
--KORIŠĆENE TEHNOLOGIJE:
+#KORIŠĆENE TEHNOLOGIJE:
 
 HTML
 
@@ -61,7 +60,7 @@ Font Awesome
 
 
 
-STRUKTURA SAJTA:
+#STRUKTURA SAJTA:
 -folder css (deset CSS fajlova)
 -folder img sa šest foldera gde su smeštene fotografije, ikonice
 -folder video sa istim videom u 2 formata (mp4 i webm )
@@ -73,12 +72,11 @@ STRUKTURA SAJTA:
 
 
 
-Ostalo:
+#Ostalo:
 
 Fotografije preuzete sa sajta: https://www.pexels.com 
 Ikonice preuzete sa sajta: https://icons8.com/
 Font slova korišćen sa https://fonts.google.com/
-
 
 
 
