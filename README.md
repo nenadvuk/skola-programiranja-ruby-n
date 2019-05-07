@@ -1,10 +1,5 @@
 
 
-
-
-
-
-
 NAZIV PROJEKTA:
 
 skola-programiranja-ruby-n
@@ -14,7 +9,7 @@ skola-programiranja-ruby-n
 
 -Responsive web stranica fiktivne škole za  obuku iy oblasti IT tehnologija
 -Pri učitavanju stranice korisnik dobija moućnost registracije
--Prilikom registracije u gornjem levom uglu stoji pozdravna poruka sa imenom korisnika
+-Prilikom registracije u gornjem levom uglu pojavljuje se pozdravna poruka sa imenom korisnika
 -
 -Identičan prikaz u Google Chrome, Opera i u Mozilla Firefox
 
