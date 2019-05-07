@@ -52,8 +52,6 @@ u desnom nalaze imena, fotografije i prosečne ocene najboljih polagit polaznika
 
 * Bootstrap
 
-* Font Awesome
-
 
 # STRUKTURA SAJTA:
 * folder css (deset CSS fajlova)

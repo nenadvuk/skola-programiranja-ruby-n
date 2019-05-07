@@ -1,7 +1,6 @@
 const doc = id => document.getElementById(id);
 
-/* loginA = false;
-loginB = false; */
+
 
 
 doc("register").addEventListener("click", function () {
@@ -26,8 +25,7 @@ doc("customer-name").addEventListener("blur", function () {
         doc("name-wrong").style.display = "none";
 
     } else doc("name-wrong").style.display = "block";
-   /*  let loginA = true;
-    console.log(loginA) */
+   
 });
 
 doc("e-mail").addEventListener("blur", function () {
@@ -37,10 +35,10 @@ doc("e-mail").addEventListener("blur", function () {
         doc("enter-mail").style.color = "green";
 
     } else doc("mail-wrong").style.display = "block";
-    /* let loginB = true;
-    console.log(loginB) */
+    
 });
-//console.log(loginB)
+
+
 
 class Buyer {
     constructor(name, email, age) {
@@ -65,6 +63,14 @@ doc("submit").addEventListener("click", function () {
     localStorage.setItem("email", JSON.stringify(email));
     localStorage.setItem("age", JSON.stringify(age));
 });
+
+
+/* document.querySelector('.btn-buy').addEventListener('click', function ()  {
+    if (Boolean(document.querySelector(".welcome-box").style.display = "none") === true) {
+        alert('Morate se registrovati')
+    } else alert('Ok')
+}) */
+ 
 
 let slika = doc("slika")
 let slika1 = doc("slika1")
