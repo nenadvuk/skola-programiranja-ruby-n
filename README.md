@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 NAZIV PROJEKTA:
 
 skola-programiranja-ruby-n
