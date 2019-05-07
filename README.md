@@ -68,7 +68,7 @@ u desnom nalaze imena, fotografije i prosečne ocene najboljih polagit polaznika
 
 # Ostalo:
 
-Fotografije preuzete sa sajta: https://www.pexels.com 
-Ikonice preuzete sa sajta: https://icons8.com/
-Font slova korišćen sa https://fonts.google.com/
+* Fotografije preuzete sa sajta: https://www.pexels.com 
+* Ikonice preuzete sa sajta: https://icons8.com/
+* Font slova korišćen sa https://fonts.google.com/
 
