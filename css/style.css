@@ -78,7 +78,7 @@ html {
     margin: auto;
     position: absolute;
     top: 0;
-    right: 54;
+    left: 0;
     z-index: 5000;
     font-family: cursive;
     padding: 3rem;
