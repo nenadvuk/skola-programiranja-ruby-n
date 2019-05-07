@@ -1,22 +1,21 @@
 
 
-NAZIV PROJEKTA:
+# NAZIV PROJEKTA:
 
 skola-programiranja-ruby-n
 30.Slobodna tema*(web sajt, responsive dizajn)
 
--OPIS:
+# OPIS:
 
 -Responsive web stranica fiktivne škole za  obuku iy oblasti IT tehnologija
 -Pri učitavanju stranice korisnik dobija moućnost registracije
 -Prilikom registracije u gornjem levom uglu pojavljuje se pozdravna poruka sa imenom korisnika
--
 -Identičan prikaz u Google Chrome, Opera i u Mozilla Firefox
 
-Struktura sajta:
+# Sadržaj sajta:
 Sajt se sastoji od jedne web stranice.
 
-Sadrži sledeće elemente:
+##Sadrži sledeće elemente:
 
     Header,
     Features,
@@ -25,11 +24,11 @@ Sadrži sledeće elemente:
     Gallery,
     Footer
 
--Header je podeljen u dva elementa
+#####Header je podeljen u dva elementa
      u levom su podaci o školi, dugme za registraciju, pozadinski video
      u desnom nalaze imena, fotografije i prosečne ocene najboljih polagit polaznika
 
--Features sadrži osnovne imformacije o trenutno najzastupljenijim i najpopularnijim programskim jezicima
+#####Features sadrži osnovne imformacije o trenutno najzastupljenijim i najpopularnijim programskim jezicima
 
 -About us - Ostavljeno prazno sa mogućnoću dodavanja relevantnih informacija o školi
 
@@ -39,7 +38,7 @@ Sadrži sledeće elemente:
 
 -Footer - Linkovi ka društvenim mrežama
 
--KORIŠĆENE TEHNOLOGIJE:
+#KORIŠĆENE TEHNOLOGIJE:
 
 HTML
 
@@ -56,7 +55,7 @@ Bootstrap
 Font Awesome
 
 
-STRUKTURA SAJTA:
+#STRUKTURA SAJTA:
 -folder css (deset CSS fajlova)
 -folder img sa šest foldera gde su smeštene fotografije, ikonice
 -folder video sa istim videom u 2 formata (mp4 i webm )
