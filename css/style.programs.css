@@ -92,27 +92,27 @@
 }
 
 .card_picture--1 {
-    background-image: linear-gradient(to right bottom, #f7b501, #e2560a), url(img/other/card-img1.png);
+    background-image: linear-gradient(to right bottom, #f7b501, #e2560a), url(../img/other/card-img1.png);
 }
 
 .card_picture--2 {
-    background-image: linear-gradient(to right bottom, #3cff19, #28b485), url(img/other/card-img2.jpg);
+    background-image: linear-gradient(to right bottom, #3cff19, #28b485), url(../img/other/card-img2.jpg);
 }
 
 .card_picture--3 {
-    background-image: linear-gradient(to right bottom, #a6d0f8, #321cfd), url(img/other/card-img4.jpg);
+    background-image: linear-gradient(to right bottom, #a6d0f8, #321cfd), url(../img/other/card-img4.jpg);
 }
 
 .card_picture--4 {
-    background-image: linear-gradient(to right bottom, rgb(219, 177, 255), rgb(115, 12, 206)), url(img/other/card-img.jpg);
+    background-image: linear-gradient(to right bottom, rgb(219, 177, 255), rgb(115, 12, 206)), url(../img/other/card-img.jpg);
 }
 
 .card_picture--5 {
-    background-image: linear-gradient(to right bottom, rgb(255, 230, 0), rgb(22, 20, 8)), url(img/other/card-img3.jpg);
+    background-image: linear-gradient(to right bottom, rgb(255, 230, 0), rgb(22, 20, 8)), url(../img/other/card-img3.jpg);
 }
 
 .card_picture--6 {
-    background-image: linear-gradient(to right bottom, rgb(255, 81, 165), rgb(252, 39, 138)), url(img/other/card-img5.jpg);
+    background-image: linear-gradient(to right bottom, rgb(255, 81, 165), rgb(252, 39, 138)), url(../img/other/card-img5.jpg);
 }
 
 .card_heading {

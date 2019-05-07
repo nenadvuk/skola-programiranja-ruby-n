@@ -41,6 +41,7 @@ doc("e-mail").addEventListener("blur", function () {
     console.log(loginB) */
 });
 //console.log(loginB)
+
 class Buyer {
     constructor(name, email, age) {
         this.name = name;
