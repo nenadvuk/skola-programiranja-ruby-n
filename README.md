@@ -2,27 +2,27 @@
 
 # NAZIV PROJEKTA:
 
-skola-programiranja-ruby-n
-30.Slobodna tema*(web sajt, responsive dizajn)
+## skola-programiranja-ruby-n
+### 30.Slobodna tema*(web sajt, responsive dizajn)
 
 # OPIS:
 
-Responsive web stranica fiktivne škole za  obuku iy oblasti IT tehnologija
-Pri učitavanju stranice korisnik dobija moućnost registracije
-Prilikom registracije u gornjem levom uglu pojavljuje se pozdravna poruka sa imenom korisnika
-Identičan prikaz u Google Chrome, Opera i u Mozilla Firefox
+* Responsive web stranica fiktivne škole za  obuku iy oblasti IT tehnologija
+* Pri učitavanju stranice korisnik dobija moućnost registracije
+* Prilikom registracije u gornjem levom uglu pojavljuje se pozdravna poruka sa imenom korisnika
+* Identičan prikaz u Google Chrome, Opera i u Mozilla Firefox
 
 # Sadržaj sajta:
 Sajt se sastoji od jedne web stranice.
 
 ## Sadrži sledeće elemente:
 
-    Header
-    Features
-    About us
-    Programs
-    Gallery
-    Footer
+* Header
+* Features
+* About us
+* Programs
+* Gallery
+* Footer
 
 ##### Header je podeljen u dva elementa
      u levom su podaci o školi, dugme za registraciju, pozadinski video
