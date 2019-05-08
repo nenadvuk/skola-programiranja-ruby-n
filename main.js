@@ -1,6 +1,6 @@
 const doc = id => document.getElementById(id);
 
-
+let input = false
 
 
 doc("register").addEventListener("click", function () {
@@ -29,12 +29,15 @@ doc("customer-name").addEventListener("blur", function () {
 });
 
 doc("e-mail").addEventListener("blur", function () {
+    abc = false
     mail = doc("e-mail").value;
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
         doc("mail-wrong").style.display = "none";
         doc("enter-mail").style.color = "green";
 
     } else doc("mail-wrong").style.display = "block";
+    return true
+   
     
 });
 
@@ -90,18 +93,18 @@ let newGrade = "";
 let newGrade1 = "";
 let newGrade2 = "";
 
-const studentsarray = ["Miloje Panić", "Ivan Perić", "Aleksa Jokić",
+const studentsarray = ["Ivana Marić", "Ivan Perić", "Aleksa Jokić",
     "Petar Lukić", "Đordje Krstić", "Peđa Cerović", "Milena Šutović",
     "Marko Andrić", "Dragana Lukić", "Ružica Đukić", "Nataša Dokić",
     "Nenad Knežević", "Boris Jovović", "Jelena Macić", "Ana Ćolić",
     "Jelena Čolević", "Maja Đorđević", "Petar Maksić", "Dragan Dabić",
     "Ana Ćosić", "Maja Kuzmić", "Danijela Vlajić", "Nikola Đurić",
     "Saša Kukić", "Ana Mitrović", "Bojan Đurišić", "Igor Ranković",
-    "Srđan Plavšić", "Darko Ćosić", "Marko Popović", "Ivana Marić",
+    "Srđan Plavšić", "Darko Ćosić", "Marko Popović", "Miloje Panić",
     "Milan Jović", "Jelena Ivić", "Marija Babić", "Veljko Petrić",
     "Maja Veličić"
 
-]
+] 
 
 const gradeArray = [9.9, 9.9, 9.8, 9.8, 9.7, 9.7, 9.7, 9.7,
     9.6, 9.6, 9.6, 9.5, 9.5, 9.4, 9.4, 9.3, 9.3, 9.3, 9.2,
