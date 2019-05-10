@@ -24,6 +24,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    min-width: 50vh;
     transform: translate(-50%, -50%);
     background-color: #eee;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, .9);
@@ -81,7 +82,7 @@
     font-weight: bold;
 }
 
-.form-style-1 input[type=text], .form-style-1 input[type=date], .form-style-1 input[type=datetime], .form-style-1 input[type=number], .form-style-1 input[type=search], .form-style-1 input[type=time], .form-style-1 input[type=url], .form-style-1 input[type=email], textarea, select {
+.form-style-1 input[type=text],  .form-style-1 input[type=number], .form-style-1 input[type=email], .form-style-1 input[type=password], select {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -91,7 +92,7 @@
     outline: none;
 }
 
-.form-style-1 input[type=text]:focus, .form-style-1 input[type=date]:focus, .form-style-1 input[type=datetime]:focus, .form-style-1 input[type=number]:focus, .form-style-1 input[type=search]:focus, .form-style-1 input[type=time]:focus, .form-style-1 input[type=url]:focus, .form-style-1 input[type=email]:focus, .form-style-1 textarea:focus, .form-style-1 select:focus {
+.form-style-1 input[type=text]:focus, .form-style-1 input[type=number]:focus, .form-style-1 input[type=email]:focus, input[type=password]:focus, .form-style-1 select:focus {
     -moz-box-shadow: 0 0 8px #88D5E9;
     -webkit-box-shadow: 0 0 8px #88D5E9;
     box-shadow: 0 0 8px #88D5E9;
@@ -194,8 +195,9 @@
         height: 0px;
     }
     100% {
-        width: 60rem;
-        max-height: 72vh;
+        width: auto;
+        height: auto;
+       
     }
 }
 
@@ -211,8 +213,8 @@
             height: 0px;
         }
         100% {
-            width: 20%;
-            min-height: 65%;
+            width: auto;
+            height: auto;
 
         }
     }

@@ -1,6 +1,7 @@
 const doc = id => document.getElementById(id);
 
-let input = false
+var inputMail = false
+var inputPassword = false
 
 
 doc("register").addEventListener("click", function () {
@@ -36,12 +37,11 @@ doc("e-mail").addEventListener("blur", function () {
         doc("enter-mail").style.color = "green";
 
     } else doc("mail-wrong").style.display = "block";
-    return true
+    inputMail = true
+    
    
     
 });
-
-
 
 class Buyer {
     constructor(name, email, age) {
@@ -67,13 +67,6 @@ doc("submit").addEventListener("click", function () {
     localStorage.setItem("age", JSON.stringify(age));
 });
 
-
-/* document.querySelector('.btn-buy').addEventListener('click', function ()  {
-    if (Boolean(document.querySelector(".welcome-box").style.display = "none") === true) {
-        alert('Morate se registrovati')
-    } else alert('Ok')
-}) */
- 
 
 let slika = doc("slika")
 let slika1 = doc("slika1")
