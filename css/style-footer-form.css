@@ -29,7 +29,7 @@
     background-color: #eee;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, .9);
     border-radius: 15px;
-    animation: box .5s ease-in-out;
+    animation: box 1s ease-in-out;
     animation-fill-mode: forwards;
     backface-visibility: hidden;
 }
@@ -82,7 +82,7 @@
     font-weight: bold;
 }
 
-.form-style-1 input[type=text],  .form-style-1 input[type=number], .form-style-1 input[type=email], .form-style-1 input[type=password], select {
+.form-style-1 input[type=text], .form-style-1 input[type=number], .form-style-1 input[type=email], .form-style-1 input[type=password], select {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -127,7 +127,6 @@
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
-
 }
 
 .form-btn {
@@ -147,13 +146,16 @@
     outline: none;
 }
 
-
 .form-btn:hover {
     background-color: #101d2c;
     color: white;
 }
 
-#fullName, #enter-mail {
+#enter-mail, #enter-password {
+    color: red;
+}
+
+#re-enter-password {
     color: red;
 }
 
@@ -164,6 +166,21 @@
 
 #mail-wrong {
     color: red;
+    display: none;
+}
+
+#password-wrong {
+    color: red;
+    display: none;
+}
+
+#password-nomatch {
+    color: red;
+    display: none;
+}
+
+#success {
+    color: green;
     display: none;
 }
 
@@ -179,6 +196,17 @@
     }
 }
 
+/* @keyframes box {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    100% {
+        width: 50%;
+        height: 50%;
+    }
+} */
+
 @keyframes boxClose {
     0% {
         opacity: 1;
@@ -188,59 +216,13 @@
     }
 }
 
-
-@keyframes box {
-    0% {
-        width: 0px;
-        height: 0px;
-    }
-    100% {
-        width: auto;
-        height: auto;
-       
-    }
-}
-
 @media only screen and (max-width: 50em) {
     .form-style-1 {
         width: 100%;
     }
 }
-@media only screen and (max-height: 700px) {
-    @keyframes box {
-        0% {
-            width: 0px;
-            height: 0px;
-        }
-        100% {
-            width: auto;
-            height: auto;
 
-        }
-    }
-}
-
-@media only screen and (max-width: 26.56em), screen and (max-height: 600px) {
-    @keyframes box {
-        0% {
-            width: 0px;
-            height: 0px;
-        }
-        100% {
-            width: auto;
-            height: 75%;
-        }
-    }
-    @keyframes box {
-        0% {
-            width: 0px;
-            height: 0px;
-        }
-        100% {
-            width: auto;
-            min-height: 55%;
-        }
-    }
+@media only screen and (max-width: 26.56em) {
     .form-container {
         margin-top: 1vh;
     }
@@ -250,5 +232,15 @@
     .form-style-1 input[type=text] {
         padding: 1rem;
         font-size: 2rem;
+    }
+}
+
+@media only screen and (max-height: 450px) {
+    .form-container {
+        margin: 0;
+    }
+    .form-style-1 {
+        margin: 5px auto;
+        font-size: 9px;
     }
 }

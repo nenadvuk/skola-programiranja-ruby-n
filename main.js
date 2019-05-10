@@ -3,7 +3,6 @@ const doc = id => document.getElementById(id);
 var inputMail = false
 var inputPassword = false
 
-
 doc("register").addEventListener("click", function () {
     doc("popup-window").style.display = "block";
     doc("forma").style.display = "block";
@@ -15,56 +14,72 @@ doc("close").addEventListener("click", function () {
     doc("myForm").reset();
     doc("name-wrong").style.display = "none";
     doc("mail-wrong").style.display = "none"
-    doc("fullName").style.color = "red";
+    doc("password-wrong").style.display = "none"
+    doc("password-nomatch").style.display = "none"
+    doc("success").style.display = "none"
     doc("enter-mail").style.color = "red";
+    doc("lozinka").style.color = "red";
 });
 
-doc("customer-name").addEventListener("blur", function () {
-    ime = doc("customer-name").value;
-    if (/^[A-ZŠĐČŽŽa-zšđčćž]{1,11}\s[A-ŠĐČŽŽZa-zšđčćž]{1,15}$/.test(ime)) {
-        doc("fullName").style.color = "green";
-        doc("name-wrong").style.display = "none";
-
-    } else doc("name-wrong").style.display = "block";
-   
-});
 
 doc("e-mail").addEventListener("blur", function () {
-    abc = false
     mail = doc("e-mail").value;
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
         doc("mail-wrong").style.display = "none";
         doc("enter-mail").style.color = "green";
 
+
     } else doc("mail-wrong").style.display = "block";
-    inputMail = true
-    
-   
-    
+
+
 });
 
+doc("lozinka").addEventListener("blur", function () {
+    password = doc("lozinka").value;
+    if (/^(?=.*\d)(?=.*[a-zA-Z]).{8,25}$/.test(password)) {
+        doc("password-wrong").style.display = "none";
+        doc("enter-password").style.color = "green";
+        inputMail = true;
+
+    } else doc("password-wrong").style.display = "block";
+
+});
+
+doc("ponovi-lozinku").addEventListener("blur", function () {
+    password = doc("lozinka").value;
+    retypePassword = doc("ponovi-lozinku").value;
+    if (retypePassword === password) {
+        doc("password-nomatch").style.display = "none";
+        doc("re-enter-password").style.color = "green";
+        inputPassword = true;
+    } else doc("password-nomatch").style.display = "block";
+
+});
+
+
+
 class Buyer {
-    constructor(name, email, age) {
+    constructor(name, email) {
         this.name = name;
         this.email = email;
-        this.age = age;
     }
 }
- 
+
 const buyerArr = [];
 
 doc("submit").addEventListener("click", function () {
     const name = doc("customer-name").value;
     const email = doc("e-mail").value;
-    const age = doc("age").value;
     if (name === "" || email === "") {
         document.querySelector(".welcome-box").style.display = "none";
     } else document.querySelector(".welcome-box").style.display = "block";
+    if (inputMail == true && inputPassword == true) {
+        doc("success").style.display = "block"
+    }
     doc("greeting").innerHTML = name;
-    buyerArr.push(new Buyer(name, email, age))
+    buyerArr.push(new Buyer(name, email))
     localStorage.setItem("name", JSON.stringify(name));
     localStorage.setItem("email", JSON.stringify(email));
-    localStorage.setItem("age", JSON.stringify(age));
 });
 
 
@@ -97,7 +112,7 @@ const studentsarray = ["Ivana Marić", "Ivan Perić", "Aleksa Jokić",
     "Milan Jović", "Jelena Ivić", "Marija Babić", "Veljko Petrić",
     "Maja Veličić"
 
-] 
+]
 
 const gradeArray = [9.9, 9.9, 9.8, 9.8, 9.7, 9.7, 9.7, 9.7,
     9.6, 9.6, 9.6, 9.5, 9.5, 9.4, 9.4, 9.3, 9.3, 9.3, 9.2,

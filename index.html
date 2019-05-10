@@ -431,27 +431,32 @@
     <div class="popup" id="popup-window">
         <div class="popup-container" id="popCon">
             <div class="form-container" id="forma">
-                <form id="myForm">
+                <form id="myForm" id="login" action="signup.php" method="post">
                     <ul class="form-style-1">
                         <li>
-                            <p> <span id="name-wrong">Ime i prezime nisu ispravni</span>
-                                <span id="mail-wrong">Neispravna e-mail adresa</span>
-                                <span id="password-wrong">***</span></p>
+                            <p><span id="mail-wrong">Neispravna e-mail adresa</span></p>
+                            <p><span id="password-wrong">Lozinka nije ispravna</span></p>
+                            <p><span id="password-nomatch">Lozinke se ne podudaraju</span></p>
+                            <p><span id="success"><b>Uspešna registracija</b> </span></p>
                         </li>
-                        <li><label>Ime i prezime <span id="fullName">* Obavezno polje</span></label>
-                            <input type="text" class="field-long" placeholder="Ime" id="customer-name" />
+                        <li><label>Ime i prezime <span id="fullName"></span></label>
+                            <input type="text" class="field-long" placeholder="Ime i prezime" id="customer-name" />
                         <li>
                             <label>Email <span id='enter-mail'>* Obavezno polje</span></label>
-                            <input type="email" class="field-long" placeholder="e-mail" id='e-mail' />
+                            <input type="email" class="field-long" placeholder="e-mail" id='e-mail'
+                                autocomplete="username" />
                         </li>
                         <li>
                             <label>Lozinka <span id='enter-password'>* Obavezno polje</span></label>
-                            <input type="password" class="field-long" placeholder="lozinka" id='password' />
+                            <p>Minimum 8 karaktera 1 slovo 1 broj</p>
+                            <input type="password" class="field-long" placeholder="lozinka" id='lozinka'
+                                autocomplete="new-password" />
                         </li>
                         <li>
                         <li>
-                            <label>Ponovite lozinku <span id='re-enter-password'></span></label>
-                            <input type="password" class="field-long" placeholder="ponovite lozinku" id='re-password' />
+                            <label><span id='re-enter-password'>Ponovite lozinku </span></label>
+                            <input type="password" class="field-long" placeholder="ponovite lozinku" id='ponovi-lozinku'
+                                autocomplete="new-password" />
                         </li>
                         </li>
                         <li>
