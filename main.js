@@ -87,8 +87,8 @@ const buyBtn = document.querySelectorAll(".btn-buy");
 for (let i = 0; i < buyBtn.length; i++) {
     buyBtn[i].onclick = function () {
         if (inputMail !== true && inputPassword !== true) {
-            console.log('Morate se prvo registrovati')
-        } else console.log('ok')
+            alert('Morate se prvo registrovati')
+        } else alert('ok')
     }
 }
 
