@@ -1,7 +1,8 @@
 const doc = id => document.getElementById(id);
 
-var inputMail = false
-var inputPassword = false
+var inputMail = false;
+var inputPassword = false;
+var buying = false;
 
 doc("register").addEventListener("click", function () {
     doc("popup-window").style.display = "block";
@@ -12,7 +13,6 @@ doc("register").addEventListener("click", function () {
 doc("close").addEventListener("click", function () {
     doc("popup-window").style.display = "none";
     doc("myForm").reset();
-    doc("name-wrong").style.display = "none";
     doc("mail-wrong").style.display = "none"
     doc("password-wrong").style.display = "none"
     doc("password-nomatch").style.display = "none"
@@ -56,8 +56,6 @@ doc("ponovi-lozinku").addEventListener("blur", function () {
 
 });
 
-
-
 class Buyer {
     constructor(name, email) {
         this.name = name;
@@ -82,16 +80,22 @@ doc("submit").addEventListener("click", function () {
     localStorage.setItem("email", JSON.stringify(email));
 });
 
+const price1 = "499€";
+const price2 = "499€";
+const price3 = "399€";
+const price4 = "349€";
+const price5 = "379€";
+const price6 = "329€";
+
 const buyBtn = document.querySelectorAll(".btn-buy");
 
 for (let i = 0; i < buyBtn.length; i++) {
     buyBtn[i].onclick = function () {
         if (inputMail !== true && inputPassword !== true) {
-            alert('Morate se prvo registrovati')
-        } else alert('ok')
-    }
+            alert("Morate se prvo registrovati")
+        } else alert ("Ok")
+    } 
 }
-
 
 
 
