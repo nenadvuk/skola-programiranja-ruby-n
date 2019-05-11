@@ -73,7 +73,7 @@ doc("submit").addEventListener("click", function () {
     if (name === "" || email === "") {
         document.querySelector(".welcome-box").style.display = "none";
     } else document.querySelector(".welcome-box").style.display = "block";
-    if (inputMail == true && inputPassword == true) {
+    if (inputMail === true && inputPassword === true) {
         doc("success").style.display = "block"
     }
     doc("greeting").innerHTML = name;
@@ -81,6 +81,19 @@ doc("submit").addEventListener("click", function () {
     localStorage.setItem("name", JSON.stringify(name));
     localStorage.setItem("email", JSON.stringify(email));
 });
+
+const buyBtn = document.querySelectorAll(".btn-buy");
+
+for (let i = 0; i < buyBtn.length; i++) {
+    buyBtn[i].onclick = function () {
+        if (inputMail !== true && inputPassword !== true) {
+            console.log('Morate se prvo registrovati')
+        } else console.log('ok')
+    }
+}
+
+
+
 
 
 let slika = doc("slika")
