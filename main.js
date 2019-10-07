@@ -80,16 +80,12 @@ doc("submit").addEventListener("click", function () {
     localStorage.setItem("email", JSON.stringify(email));
 });
 
-const price1 = "499€";
-const price2 = "499€";
-const price3 = "399€";
-const price4 = "349€";
-const price5 = "379€";
-const price6 = "329€";
+
 
 const buyBtn = document.querySelectorAll(".btn-buy");
 
 for (let i = 0; i < buyBtn.length; i++) {
+
     buyBtn[i].onclick = function () {
         if (inputMail !== true && inputPassword !== true) {
             alert("Morate se prvo registrovati")
@@ -97,8 +93,19 @@ for (let i = 0; i < buyBtn.length; i++) {
     } 
 }
 
+const price1 = "499€";
+const price2 = "499€";
+const price3 = "399€";
+const price4 = "349€";
+const price5 = "379€";
+const price6 = "329€";
 
+/* for(let i=1; i<=6; i++) {
+    doc("buy"+i).addEventListener("click", function () {
+        doc("price").innerHTML = price+i
+    })
 
+} */
 
 let slika = doc("slika")
 let slika1 = doc("slika1")
